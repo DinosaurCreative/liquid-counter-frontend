@@ -4,6 +4,7 @@
 @import url(./link/_place/link_place_header-signin.css);
 @import url(./link/_place/link_place_header-signup.css);
 @import url(./link/_place/link_place_footer.css);
+@import url(./link/_place/link_place_registration.css);
 
 
 @import url(./form/form.css);
@@ -12,6 +13,7 @@
 @import url(./form/__input/form__input.css);
 @import url(./form/__error-span/form__error-span.css);
 @import url(./form/__container/form__container.css);
+@import url(./form/__submit-button/_place/form__submit-btn_place_login.css);
 
 
 /* @import url(.); */

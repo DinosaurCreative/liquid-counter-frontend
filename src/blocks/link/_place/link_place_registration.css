@@ -1,0 +1,10 @@
+.link_place_registration {
+  color:rgb(26, 105, 196);
+  font-size: 14px;
+  transition: all .15s ease-in;
+}
+
+.link_place_registration:hover {
+  color:rgb(66, 153, 252);
+  font-size: 14px;
+}

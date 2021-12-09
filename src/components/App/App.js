@@ -3,6 +3,7 @@ import './App.css';
 import Header from '../Header/Header.js';
 import Footer from '../Footer/Footer';
 import Registration from '../Registration/Registration';
+import Login from '../Login/Login';
 
 function App () {
 
@@ -10,7 +11,9 @@ function App () {
     <div className='page'>
       {/* <Header />
       <Footer /> */}
-      <Registration />
+      {/* <Registration /> */}
+      <Login />
+
     </div>
   );
 };

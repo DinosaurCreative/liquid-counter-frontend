@@ -1,6 +1,8 @@
+import { Link } from "react-router-dom";
+
 function Registration() {
   return (
-    // <div className='registration'>
+    <div className='registration'>
       <div className='form__container'>
         <h1 className='form__title'>{'Регистрация'}</h1>
         <form className='form' type='submit'>
@@ -14,8 +16,9 @@ function Registration() {
           <span className='form__error-span'></span>
           <button className='form__submit-button' type='submit'>{'Зарегистрироваться'}</ button>
         </form>
+        <p className='registration__question'>Уже зарегистрированы? {<Link className='link link_place_registration' to='/signin'>{'Войти'}</Link>}</p>
       </div>
-    // </div>
+    </div>
   )
 }
 

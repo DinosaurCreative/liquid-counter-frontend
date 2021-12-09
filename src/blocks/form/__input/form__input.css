@@ -16,7 +16,7 @@
   color: #817E7E;
   font-size: 12px;
   padding-bottom: 10px;
-  transition: all .15s ease-out;
+  transition: all .3s ease-out;
 }
 
 .form__input:focus::placeholder {
