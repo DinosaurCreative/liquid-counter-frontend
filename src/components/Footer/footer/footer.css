@@ -1,8 +1,15 @@
 .footer {
   display: flex;
   flex-direction: column;
-  width: 100%
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  max-width: 1120px;
+  margin: auto auto 0;
 }
+
 .footer::before {
   content: '';
   border-top: 1px solid #989898;

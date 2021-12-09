@@ -1,0 +1,24 @@
+.form__input {
+  background: transparent;
+  outline: none;
+  border: none;
+  padding: 0;
+  width: 100%;
+  margin-bottom: 5px;
+  border-bottom: 1px #a9a9a957 solid ;
+  padding: 0 0 5px 0;
+  color: #fff;
+}
+
+.form__input::placeholder {
+  background-position-y: -6px;
+  line-height: 13px;
+  color: #817E7E;
+  font-size: 12px;
+  padding-bottom: 10px;
+  transition: all .15s ease-out;
+}
+
+.form__input:focus::placeholder {
+  opacity: 0;
+}
