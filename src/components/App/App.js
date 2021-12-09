@@ -9,10 +9,11 @@ function App () {
 
   return (
     <div className='page'>
-      {/* <Header />
-      <Footer /> */}
+      <Header />
+      
+      <Footer />
       {/* <Registration /> */}
-      <Login />
+      {/* <Login /> */}
 
     </div>
   );
