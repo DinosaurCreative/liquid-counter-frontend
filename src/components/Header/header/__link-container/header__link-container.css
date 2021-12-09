@@ -1,0 +1,6 @@
+.header__link-container {
+  display: flex;
+  flex-direction: row;
+  margin: 21px 0 auto;
+  gap: 12px;
+}

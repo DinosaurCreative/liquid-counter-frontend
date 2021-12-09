@@ -1,0 +1,10 @@
+.page {
+  max-width: 1120px;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  min-height: 100vh;
+  text-decoration: none;
+  margin: auto;
+  font-family: 'Inter', 'Roboto', 'sans-serif';
+}

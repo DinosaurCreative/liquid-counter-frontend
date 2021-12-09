@@ -1,0 +1,12 @@
+.link_place_header-signup {
+  background: #97A7B6;
+  display: flex;
+  font-size: 12px;
+  line-height: 30px;
+  color: #000;
+  height: 30px;
+  padding: 0 12px;
+  border-radius: 5px;
+  text-align: center; 
+  justify-content: center;  
+}

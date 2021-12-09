@@ -1,0 +1,12 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.header::after {
+  display: flex;
+  content: '';
+  border-bottom: 1px solid rgb(151, 167, 182);
+  opacity: .8;
+}

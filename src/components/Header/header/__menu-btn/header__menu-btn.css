@@ -1,0 +1,18 @@
+.header__menu-btn {
+  height: 30px;
+  width: 30px;
+  margin: 22px 0 21px auto;
+  background-image: url('../../../../images/menu_button.svg');
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  outline: none;
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding: 0;
+  transition: all .15s linear;
+}
+
+.header__menu-btn:hover {
+  transform: scale(1.2)
+}
