@@ -7,6 +7,6 @@
 .header::after {
   display: flex;
   content: '';
-  border-bottom: 1px solid rgb(151, 167, 182);
+  border-bottom: 1px solid #989898;
   opacity: .8;
 }

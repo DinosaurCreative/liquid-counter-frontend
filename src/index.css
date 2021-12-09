@@ -13,4 +13,6 @@
 @import url(./blocks/common-block-styles.css);
 
 
+@import url(./components/Footer/Footer.css);
+
 /* @import url(./); */
