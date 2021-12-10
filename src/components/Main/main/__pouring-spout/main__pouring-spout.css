@@ -1,0 +1,11 @@
+.main__pouring-spout {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+.main__pouring-spout:checked + .main__pourin-spout-pic  {
+  background-color: #1b4caa79;
+}

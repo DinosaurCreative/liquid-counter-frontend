@@ -1,0 +1,29 @@
+.main__quantity-btn {
+  background: #97A7B6;
+  border-radius: 5px;
+  outline: none;
+  border: 0;
+  font-size: 100px;
+  line-height: 0;
+  padding-bottom: 5px;
+  color: #d86800;
+  font-family: monospace;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all .1s linear;
+}
+.main__quantity-btn:nth-of-type(2) {
+  padding-bottom: 20px;
+}
+
+.main__quantity-btn:nth-of-type(4) {
+  padding-bottom: 20px;
+}
+.main__quantity-btn:hover {
+  color: #eb7404;
+  background: #4E7191;
+}
+.main__quantity-btn:active {
+  color: #9e4c00;
+  background: #32495f;
+}

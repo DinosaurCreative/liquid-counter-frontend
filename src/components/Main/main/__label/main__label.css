@@ -1,0 +1,50 @@
+.main__label {
+  z-index: 1;
+  grid-row-start: 2;
+  grid-column-start: 5;
+  background-image: url('../../../../images/pouriers_spouts/1.svg');
+  background-repeat: no-repeat;
+  border-radius: 5px;
+  position: relative;
+  width: 100px;
+  height: 75px;
+  background-color: #97A7B6;
+}
+
+.main__label:nth-of-type(2) {
+  grid-row-start: 2;
+  grid-column-start: 6;
+  background-image: url('../../../../images/pouriers_spouts/2.svg');
+}
+
+.main__label:nth-of-type(3) {
+  grid-row-start: 3;
+  grid-column-start: 5;
+  background-image: url('../../../../images/pouriers_spouts/3.svg');
+}
+
+.main__label:nth-of-type(4) {
+  grid-row-start: 3;
+  grid-column-start: 6;
+  background-image: url('../../../../images/pouriers_spouts/4.svg');
+}
+
+.main__label:nth-of-type(5) {
+  grid-row-start: 4;
+  grid-column-start: 5;
+  background-image: url('../../../../images/pouriers_spouts/5.svg');
+}
+
+.main__label:nth-of-type(6) {
+  grid-row-start: 4;
+  grid-column-start: 6;
+  background-image: url('../../../../images/pouriers_spouts/6.svg');
+}
+
+.main__label:nth-of-type(7) {
+  grid-row-start: 5;
+  grid-column-start: 5;
+  background-image: url('../../../../images/pouriers_spouts/no_cap.svg');
+}
+
+

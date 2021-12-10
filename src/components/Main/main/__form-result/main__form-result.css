@@ -1,0 +1,11 @@
+.main__form-result {
+  background-color: #95eda8d5;
+  color: #000;
+  grid-column: 3/5;
+  margin: 0;
+  border-radius: 5px;
+  font-size: 20px;
+  padding-left: 10px;
+  align-items: center;
+  display: flex;
+}

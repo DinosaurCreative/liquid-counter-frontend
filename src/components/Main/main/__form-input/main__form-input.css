@@ -1,0 +1,22 @@
+.main__form-input {
+  grid-row: 1/2;
+  grid-column: 3/5;
+  outline: none;
+  background-color: #C6C6C6;
+  border-radius: 5px;
+  border: none;
+  transition: all .08s linear;
+  padding: 10px;
+}
+.main__form-input:focus {
+  background-color: #ffffff;
+  filter: drop-shadow(0px 0px 6px rgba(255, 255, 253, 0.8));
+}
+
+.main__form-input::placeholder  {
+  transition: all .1s linear;
+}
+
+.main__form-input:focus::placeholder{
+  color: transparent;
+}

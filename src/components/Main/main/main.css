@@ -1,0 +1,6 @@
+.main {
+  display: flex;
+  flex-direction: row;
+  gap: 100px;
+  margin: 58px 0 auto
+}
