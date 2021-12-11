@@ -1,7 +1,8 @@
 function Main () {
   return (
     <div className='main'>
-        <div className='main__calculator'>
+      <h1 className='main__nothing-scanded-msg'>Отсканируйте штрих-код</h1>
+        {/* <div className='main__calculator'>
           <div className='main__quantity-container'>
             <p className='main__quantity-board'>Остаток закрытых бутылок: </p>
             <p className='main__quantity'>0</p> 
@@ -62,7 +63,7 @@ function Main () {
           <p className='main__item-volume'>0.7</p>
           <p className='main__item-barcode'>1234567890123</p>
           <button className='main__send-result'>Отправить</button>
-        </div>
+        </div> */}
     </div>
   )
 }
