@@ -1,3 +1,6 @@
 .main__item-card {
-  
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  row-gap: 5px;
 }

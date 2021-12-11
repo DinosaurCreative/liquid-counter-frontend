@@ -47,4 +47,10 @@
   background-image: url('../../../../images/pouriers_spouts/no_cap.svg');
 }
 
+.main__label:nth-of-type(8) {
+  grid-row-start: 5;
+  grid-column-start: 6;
+  background-image: url('../../../../images/pouriers_spouts/cap.svg');
+}
+
 

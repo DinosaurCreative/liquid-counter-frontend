@@ -12,7 +12,6 @@ function Main () {
             </div>
           <div className='main__quantity-container'>
             <p className='main__quantity-board'>Гейзер? </p>
-            <p className='main__quantity'></p> 
             </div>
           <button className='main__quantity-btn' >+</button>
           <button className='main__quantity-btn' >-</button>
@@ -47,6 +46,10 @@ function Main () {
             <input className='main__pouring-spout' type='radio' name='choice' id='type_seven' value='0' />          
             <span className='main__pourin-spout-pic' />
           </label>
+          <label className='main__label' htmlFor='type_eight' >
+            <input className='main__pouring-spout' type='radio' name='choice' id='type_eight' value='0' />          
+            <span className='main__pourin-spout-pic' />
+          </label>
           <form className='main__calculator-form' >
             <button className='main__form-btn'>Рассчитать</button>
             <input className='main__form-input' type='text' placeholder='Введите показания весов' />
@@ -54,11 +57,11 @@ function Main () {
           </form>
         </div>
         <div className='main__item-card'>
-          <img className='main__item-label'></img>
-          <p className='main__item-title'></p>
-          <p className='main__item-volume'></p>
-          <p className='main__item-barcode'></p>
-          <button className='main__send-result'></button>
+          <img className='main__item-label' src='https://logosarchive.com/wp-content/uploads/2021/06/Jack-Daniels-bottle-label-logo.png' alt='Jack Daniels'></img>
+          <p className='main__item-title'>{'Jack Daniels N7'}</p>
+          <p className='main__item-volume'>0.7</p>
+          <p className='main__item-barcode'>1234567890123</p>
+          <button className='main__send-result'>Отправить</button>
         </div>
     </div>
   )

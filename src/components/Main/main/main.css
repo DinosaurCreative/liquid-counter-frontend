@@ -4,3 +4,9 @@
   gap: 100px;
   margin: 58px 0 auto
 }
+
+/* @media screen and (max-width: 1119px){
+  .main {
+    gap: 15px;
+  }
+} */

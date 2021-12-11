@@ -1,3 +1,5 @@
 .main__item-label {
-  
+  max-width: 220px;
+  width: 100%;
+  margin: 0 auto;
 }
