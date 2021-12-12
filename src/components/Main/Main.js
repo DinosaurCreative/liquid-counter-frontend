@@ -1,8 +1,8 @@
 function Main () {
   return (
     <div className='main'>
-      <h1 className='main__nothing-scanded-msg'>Отсканируйте штрих-код</h1>
-        {/* <div className='main__calculator'>
+      {/* <h1 className='main__nothing-scanded-msg'>Отсканируйте штрих-код</h1> */}
+        <div className='main__calculator'>
           <div className='main__quantity-container'>
             <p className='main__quantity-board'>Остаток закрытых бутылок: </p>
             <p className='main__quantity'>0</p> 
@@ -60,10 +60,10 @@ function Main () {
         <div className='main__item-card'>
           <img className='main__item-label' src='https://logosarchive.com/wp-content/uploads/2021/06/Jack-Daniels-bottle-label-logo.png' alt='Jack Daniels'></img>
           <p className='main__item-title'>{'Jack Daniels N7'}</p>
-          <p className='main__item-volume'>0.7</p>
-          <p className='main__item-barcode'>1234567890123</p>
+          <p className='main__item-volume'>Объем: 0.7</p>
+          <p className='main__item-barcode'>Код: 1234567890123</p>
           <button className='main__send-result'>Отправить</button>
-        </div> */}
+        </div>
     </div>
   )
 }

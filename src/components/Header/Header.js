@@ -11,7 +11,7 @@ function Header() {
 
         <div className="header__link-container">
           <Link to='signin' href='#' className='link link_place_header-signup' >{'РЕГИСТРАЦИЯ'}</ Link>
-          {/* <Link to='signup' href='#' className='link link_place_header-signin' >{'ВОЙТИ'}</ Link> */}
+          <Link to='signup' href='#' className='link link_place_header-signin' >{'ВОЙТИ'}</ Link>
         </div>
         {/* <button className='header__menu-btn' type='button' /> */}
 

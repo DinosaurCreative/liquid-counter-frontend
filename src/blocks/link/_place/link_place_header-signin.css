@@ -9,4 +9,13 @@
   border-radius: 5px;
   text-align: center; 
   justify-content: center;
+  transition: all .1s linear;
+}
+
+.link_place_header-signin:hover {
+  background: #4E7191;
+}
+
+.link_place_header-signin:active {
+  background: #32495f;
 }
