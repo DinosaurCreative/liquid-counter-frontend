@@ -14,7 +14,7 @@ function Registration() {
           <span className='form__error-span'></span>
           <input className='form__input' type='text' placeholder='Секретный ключ'/>
           <span className='form__error-span'></span>
-          <button className='form__submit-button' type='submit'>{'Зарегистрироваться'}</ button>
+          <button className='form__submit-button form__submit-button_place_register' type='submit'>{'Зарегистрироваться'}</ button>
         </form>
         <p className='registration__question'>Уже зарегистрированы? {<Link className='link link_place_registration' to='/signin'>{'Войти'}</Link>}</p>
       </div>

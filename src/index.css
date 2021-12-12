@@ -16,5 +16,8 @@
 
 @import url(./components/Main/Main.css);
 
+@import url(./components/AddItem/AddItem.css);
+
+@import url(./components/UpdateItem/UpdateItem.css);
 
 /* @import url(./); */

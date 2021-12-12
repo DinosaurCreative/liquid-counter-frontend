@@ -1,0 +1,9 @@
+.updateItem__title {
+  color: #A3A997;
+  font-size: 45px;
+  font-weight: 400;
+  font-style: normal;
+  display: flex;
+  justify-content: center;
+  margin: 25px auto auto;
+}

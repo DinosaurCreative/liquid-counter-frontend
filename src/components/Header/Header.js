@@ -10,10 +10,10 @@ function Header() {
         <Link to='/' href='#' className="logo logo_place_header" />
 
         <div className="header__link-container">
-          <Link to='signin' href='#' className='link link_place_header-signup' >{'РЕГИСТРАЦИЯ'}</ Link>
-          <Link to='signup' href='#' className='link link_place_header-signin' >{'ВОЙТИ'}</ Link>
+          {/* <Link to='signin' href='#' className='link link_place_header-signup' >{'РЕГИСТРАЦИЯ'}</ Link>
+          <Link to='signup' href='#' className='link link_place_header-signin' >{'ВОЙТИ'}</ Link> */}
         </div>
-        {/* <button className='header__menu-btn' type='button' /> */}
+        <button className='header__menu-btn' type='button' />
 
       </div>
     </div>
