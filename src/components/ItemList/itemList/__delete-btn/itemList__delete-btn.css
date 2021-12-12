@@ -1,0 +1,23 @@
+.itemList__delete-btn {
+  background-image: url('../../../../images/Delete_item.svg');
+  height: 19px;
+  width: 19px;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: contain;
+  outline: none;
+  border: none;
+  transition: transform .3s ease-in-out, opacity .1s ease-in-out;
+  align-self: flex-end;
+  margin-left: 35px;
+  padding: 0;
+  cursor: pointer;
+}
+
+.itemList__delete-btn:hover {
+  transform: rotate(90deg) scale(1.3);
+}
+
+.itemList__delete-btn:active {
+  opacity: .7;
+}

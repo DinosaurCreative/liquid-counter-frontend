@@ -1,7 +1,7 @@
 function AddItem() {
   return (
     <div className='addItem'>
-      <h1 className='addItem__title'>Добавить позицию</h1>
+      <h1 className='component-title'>Добавить позицию</h1>
       <form className='form form_place_addItem' type='submit'>
         <input className='form__input form__input_place_addItem' placeholder='Наименование позиции'/>
         <span className='form__error-span form__error-span_place_addItem'>12345678</span>

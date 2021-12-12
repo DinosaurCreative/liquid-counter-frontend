@@ -1,0 +1,11 @@
+.itemList__line {
+  display: flex;
+  flex-direction: column;
+}
+
+.itemList__line:after {
+  content: '';
+  border-bottom: 1px #afadad93 solid;
+  margin: 5px auto 5px;
+  width: 100%
+}

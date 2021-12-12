@@ -7,13 +7,15 @@ import Login from '../Login/Login';
 import Main from '../Main/Main';
 import AddItem from '../AddItem/AddItem';
 import UpdateItem from '../UpdateItem/UpdateItem';
+import PreviousInventa from '../PreviousInventa/PreviousInventa';
 
 function App () {
 
   return (
     <div className='page'>
       <Header />
-      <AddItem />
+      <PreviousInventa />
+      {/* <AddItem /> */}
       {/* <UpdateItem /> */}
       {/* <Main /> */}
       <Footer />
