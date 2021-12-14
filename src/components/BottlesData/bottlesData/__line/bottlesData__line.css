@@ -1,13 +1,13 @@
-.previousInventa__line {
+.bottlesData__line {
   display: flex;
   flex-direction: column;
   position: relative;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
 }
 
-.previousInventa__line:after {
+.bottlesData__line:after {
   content: '';
   border-bottom: 1px #afadad93 solid;
-  margin: 10px auto 0;
+  margin: 30px auto 0;
   width: 100%
 }

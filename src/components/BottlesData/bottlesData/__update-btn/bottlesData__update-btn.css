@@ -1,4 +1,4 @@
-.previousInventa__update-btn {
+.bottlesData__update-btn {
   background-image: url('../../../../images/Vector.svg');
   width: 30px;
   height: 30px;
@@ -13,13 +13,14 @@
   cursor: pointer;
   margin-right: 35px;
   align-self: flex-start;
+
 }
 
-.previousInventa__update-btn:hover {
+.bottlesData__update-btn:hover {
   transform: scale(1.3);
   filter: drop-shadow(0px 0px 5px rgba(255, 220, 21, 0.8));
 }
 
-.previousInventa__update-btn:active {
+.bottlesData__update-btn:active {
   opacity: .7;
 }

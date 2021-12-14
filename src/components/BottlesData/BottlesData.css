@@ -1,0 +1,16 @@
+@import url(./bottlesData/bottlesData.css);
+@import url(./bottlesData/__btn-container/bottlesData__btn-container.css);
+@import url(./bottlesData/__container/bottlesData__container.css);
+@import url(./bottlesData/__delete-btn/bottlesData__delete-btn.css);
+@import url(./bottlesData/__item-data/bottlesData__item-data.css);
+@import url(./bottlesData/__item-param/bottlesData__item-param.css);
+@import url(./bottlesData/__item/bottlesData__item.css);
+@import url(./bottlesData/__label/bottlesData__label.css);
+@import url(./bottlesData/__line/bottlesData__line.css);
+@import url(./bottlesData/__open-checkbox-overlay/bottlesData__open-checkbox-overlay.css);
+@import url(./bottlesData/__open-checkbox/bottlesData__open-checkbox.css);
+@import url(./bottlesData/__param-title/bottlesData__param-title.css);
+@import url(./bottlesData/__update-btn/bottlesData__update-btn.css);
+
+
+/* @import url(./bottlesData); */

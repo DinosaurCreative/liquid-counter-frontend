@@ -1,4 +1,4 @@
-.previousInventa__open-checkbox-overlay {
+.bottlesData__open-checkbox-overlay {
   content: url('../../../../images/watch-btn.svg');
   min-width: 45px;
   min-height: 20px;
@@ -11,12 +11,12 @@
   opacity: .9;
 }
 
-.previousInventa__open-checkbox-overlay:hover {
+.bottlesData__open-checkbox-overlay:hover {
   transform: scale(1.3);
   filter: drop-shadow(0px 0px 5px rgba(255, 220, 21, 0.8));
 }
 
-.previousInventa__open-checkbox-overlay:active {
+.bottlesData__open-checkbox-overlay:active {
   transform: scale(1.3);
   opacity: .6;
 }

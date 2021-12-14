@@ -1,16 +1,18 @@
-@import url(./previousInventa/previousInventa.css);
-@import url(./previousInventa/__btn-container/previousInventa__btn-container.css);
-@import url(./previousInventa/__container/previousInventa__container.css);
-@import url(./previousInventa/__delete-btn/previousInventa__delete-btn.css);
-@import url(./previousInventa/__item-data/previousInventa__item-data.css);
-@import url(./previousInventa/__item-param/previousInventa__item-param.css);
-@import url(./previousInventa/__item/previousInventa__item.css);
-@import url(./previousInventa/__label/previousInventa__label.css);
 @import url(./previousInventa/__line/previousInventa__line.css);
+@import url(./previousInventa/__container/previousInventa__container.css);
+@import url(./previousInventa/__item/previousInventa__item.css);
+@import url(./previousInventa/__btn-container/previousInventa__btn-container.css);
 @import url(./previousInventa/__open-btn/previousInventa__open-btn.css);
-@import url(./previousInventa/__open-checkbox-overlay/previousInventa__open-checkbox-overlay.css);
-@import url(./previousInventa/__open-checkbox/previousInventa__open-checkbox.css);
+@import url(./previousInventa/__delete-btn/previousInventa__delete-btn.css);
 @import url(./previousInventa/__param-title/previousInventa__param-title.css);
-@import url(./previousInventa/__update-btn/previousInventa__update-btn.css);
+
+
+/* @import url(./previousInventa/previousInventa.css); */
+/* @import url(./previousInventa/__label/previousInventa__label.css); */
+/* @import url(./previousInventa/__item-data/previousInventa__item-data.css); */
+/* @import url(./previousInventa/__item-param/previousInventa__item-param.css); */
+/* @import url(./previousInventa/__open-checkbox-overlay/previousInventa__open-checkbox-overlay.css); */
+/* @import url(./previousInventa/__open-checkbox/previousInventa__open-checkbox.css); */
+/* @import url(./previousInventa/__update-btn/previousInventa__update-btn.css); */
 
 /* @import url(./previousInventa); */

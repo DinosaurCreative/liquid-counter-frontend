@@ -1,18 +1,6 @@
 @import url(./itemList/__title/itemList__title.css);
 @import url(./itemList/__list/itemList__list.css);
 @import url(./itemList/itemList.css);
+@import url(./itemList/__sort-btn-container/itemList__sort-btn-container.css);
+@import url(./itemList/__sort-data-btn/itemList__sort-data-btn.css);
 
-/* @import url(./itemList/__delete-btn/itemList__delete-btn.css);
-@import url(./itemList/__item/itemList__item.css);
-@import url(./itemList/__line/itemList__line.css);
-@import url(./itemList/__open-btn/itemList__open-btn.css);
-@import url(./itemList/__btn-container/itemList__btn-container.css);
-@import url(./itemList/__container/itemList__container.css);
-@import url(./itemList/__update-btn/itemList__update-btn.css);
-@import url(./itemList/__item-data/itemList__item-data.css);
-@import url(./itemList/__item-param/itemList__item-param.css);
-@import url(./itemList/__param-title/itemList__param-title.css);
-@import url(./itemList/__open-checkbox/itemList__open-checkbox.css);
-@import url(./itemList/__label/itemList__label.css);
-@import url(./itemList/__open-checkbox-overlay/itemList__open-checkbox-overlay.css);
- */

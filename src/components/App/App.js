@@ -1,4 +1,6 @@
 // import { Route, Routes } from 'react-router-dom';
+import { useState } from 'react';
+
 import './App.css';
 import Header from '../Header/Header.js';
 import Footer from '../Footer/Footer';
@@ -10,12 +12,18 @@ import UpdateItem from '../UpdateItem/UpdateItem';
 import PreviousInventa from '../PreviousInventa/PreviousInventa';
 import ItemDataBase from '../ItemDataBase/ItemDataBase';
 import ItemList from '../ItemList/ItemList';
-function App () {
+import { bottles, inventas } from '../../utils/constants';
 
+
+function App () {
+  const [ inventarizations, setInventarizations ] = useState(inventas);
   return (
     <div className='page'>
       <Header />
-      <ItemList component={PreviousInventa}/>
+      <ItemList component={PreviousInventa}
+                inventarizations={inventarizations}
+                setInventarizations={setInventarizations}
+      />
       {/* <ItemDataBase /> */}
       {/* <PreviousInventa /> */}
       {/* <AddItem /> */}

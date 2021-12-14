@@ -1,4 +1,4 @@
-.previousInventa__open-checkbox {
+.bottlesData__open-checkbox {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -6,7 +6,7 @@
   clip: rect(0 0 0 0);
 }
 
-.previousInventa__open-checkbox:checked ~ .previousInventa__item-data {
+.bottlesData__open-checkbox:checked ~ .bottlesData__item-data {
   display: flex;
   flex-direction: column;
   row-gap: 12px;
@@ -19,6 +19,6 @@
   line-height: 1;
 }
 
-.previousInventa__open-checkbox:checked ~ .previousInventa__open-checkbox-overlay {
+.bottlesData__open-checkbox:checked ~ .bottlesData__open-checkbox-overlay {
   margin-bottom: 260px;
 }

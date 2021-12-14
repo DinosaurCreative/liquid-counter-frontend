@@ -1,0 +1,18 @@
+.itemList__sort-data-btn {
+  outline: none;
+  border: none;
+  background: #a3a997cb;
+  color: white;
+  cursor: pointer;
+  width: 162px;
+  height: 40px;
+  border-radius: 5px;
+  transition: all .1s ease-in;
+  box-sizing: content-box;
+  word-spacing: 15px;
+}
+
+.itemList__sort-data-btn:hover {
+  background: #a3a9977a;
+  transform: scale(1.2);
+}

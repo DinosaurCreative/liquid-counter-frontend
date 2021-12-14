@@ -1,4 +1,5 @@
 .previousInventa__btn-container {
   display: flex;
   flex-direction: row;
+  margin-bottom: 0;
 }
