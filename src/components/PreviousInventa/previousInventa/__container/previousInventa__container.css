@@ -1,5 +1,6 @@
-.itemList__container {
+.previousInventa__container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  margin-bottom: 0;
 }

@@ -22,4 +22,12 @@
 
 @import url(./components/ItemList/ItemList.css);
 
-/* @import url(./); */
+@import url(./components/ItemDataBase/ItemDataBase.css);
+
+@import url(./components/PreviousInventa/PreviousInventa.css);
+
+/* @import url(./components); */
+
+/* @import url(./components); */
+
+/* @import url(./components); */

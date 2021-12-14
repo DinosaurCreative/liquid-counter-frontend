@@ -8,13 +8,16 @@ import Main from '../Main/Main';
 import AddItem from '../AddItem/AddItem';
 import UpdateItem from '../UpdateItem/UpdateItem';
 import PreviousInventa from '../PreviousInventa/PreviousInventa';
-
+import ItemDataBase from '../ItemDataBase/ItemDataBase';
+import ItemList from '../ItemList/ItemList';
 function App () {
 
   return (
     <div className='page'>
       <Header />
-      <PreviousInventa />
+      <ItemList component={PreviousInventa}/>
+      {/* <ItemDataBase /> */}
+      {/* <PreviousInventa /> */}
       {/* <AddItem /> */}
       {/* <UpdateItem /> */}
       {/* <Main /> */}

@@ -1,0 +1,29 @@
+.previousInventa__item-data {
+  /* display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  list-style-type: none;
+  padding: 0;
+  left: 0;
+  right: 0;
+  top: 30px;
+  bottom: 30px; */
+  
+  position: absolute;
+  height: 0;
+  transition: all .2s ease-in-out;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 30px;
+  list-style-type: none;
+  padding: 0;
+  row-gap: 0;
+  opacity: 0;
+  line-height: 0;
+
+  /* display: grid; */
+  /* grid-template-columns: repeat(2, 0); */
+  /* grid-template-rows: repeat(5, 0); */
+  /* column-gap: 20px; */
+}

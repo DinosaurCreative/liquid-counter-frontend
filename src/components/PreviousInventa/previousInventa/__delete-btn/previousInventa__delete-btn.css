@@ -1,7 +1,7 @@
-.itemList__delete-btn {
+.previousInventa__delete-btn {
   background-image: url('../../../../images/Delete_item.svg');
-  height: 19px;
-  width: 19px;
+  height: 30px;
+  width: 30px;
   background-color: transparent;
   background-repeat: no-repeat;
   background-size: contain;
@@ -9,15 +9,16 @@
   border: none;
   transition: transform .3s ease-in-out, opacity .1s ease-in-out;
   align-self: flex-end;
-  margin-left: 35px;
   padding: 0;
   cursor: pointer;
+  align-self: flex-start;
 }
 
-.itemList__delete-btn:hover {
+.previousInventa__delete-btn:hover {
   transform: rotate(90deg) scale(1.3);
+  filter: drop-shadow(0px 0px 5px rgba(209, 68, 68, 0.8));
 }
 
-.itemList__delete-btn:active {
+.previousInventa__delete-btn:active {
   opacity: .7;
 }

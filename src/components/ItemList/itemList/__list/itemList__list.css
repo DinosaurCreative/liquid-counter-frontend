@@ -1,0 +1,7 @@
+.itemList__list {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  list-style-type: none;
+  margin: 60px 0 100px;
+}
