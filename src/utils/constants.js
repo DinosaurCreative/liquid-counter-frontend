@@ -1,10 +1,13 @@
+export const prevInventaTitle = 'Предыдущие инвентаризации';
+export const bottlesDBTitle = 'База данных позиций';
+
 export const bottles = [
   {
     title: 'Jack Daniels',
     volume: 0.7,
     capWeight: 0.05,
     fullWeight: .9,
-    emptyWeiht: .2,
+    emptyWeight: .2,
     barcode: 123456789009876,
     alcoType: 'whiskey',
     label: 'wertyj',
