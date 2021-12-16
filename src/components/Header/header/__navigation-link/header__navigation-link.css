@@ -1,0 +1,26 @@
+.header__navigation-link {
+  text-decoration: none;
+  color: #fff;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  align-self: center;
+}
+.header__navigation-link:after {
+  content: '';
+  border-bottom: 3px solid;
+  transition: all .2s ease-in-out;
+  width: 0;
+  padding-top: 5px;
+}
+
+.header__navigation-link:hover:after {
+  width: 100%;
+}
+
+@media screen and (max-width: 1279px){
+  .header__navigation-link {
+    font-size: 15px;
+  }
+}

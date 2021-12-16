@@ -1,0 +1,31 @@
+.header__navigation-close-btn {
+  background-image: url('../../../../images/Delete_item_white.svg');
+  height: 35px;
+  width: 35px;
+  z-index: 2;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  transition: all .2s ease-in-out;
+  margin: 60px auto auto 60px;
+  padding: 0;
+  cursor: pointer;
+}
+
+.header__navigation-close-btn:hover {
+  transform: scale(1.2) rotate(90deg);
+}
+
+@media screen and (max-width: 1279px){
+  .header__navigation-close-btn {
+    margin: 40px auto auto 40px;
+  }
+}
+@media screen and (max-width: 1119px){
+  .header__navigation-close-btn {
+    height: 25px;
+    width: 25px;
+  }
+}

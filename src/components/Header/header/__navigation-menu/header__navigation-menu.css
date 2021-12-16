@@ -1,0 +1,17 @@
+.header__navigation-menu {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  right: 0;
+  background-color: #0000009f;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transition: all .6s ease-out;
+  z-index: 1;
+  overflow: hidden;
+}
+
+
+

@@ -1,0 +1,20 @@
+.header__navigation-title {
+  z-index: 2;
+  margin: 80px auto auto;
+  font-size: 35px;
+  font-weight: 400;
+  background-color: transparent;
+  max-width: fit-content;
+}
+
+/* @media screen and (max-width: 1279px){
+  .header__navigation-title {
+    margin-right: 13%;
+    font-size: 25px;
+  }
+}
+
+@media screen and (max-width: 1119px){
+  .header__navigation-title {
+  }
+} */

@@ -1,0 +1,8 @@
+.header__navigation-container {
+  width: 33%;
+  background-color: rgb(37, 37, 37);
+  height: 100%;
+  margin-left: 67%;
+  transition: all .6s ease-out;
+  opacity: 1;
+}
