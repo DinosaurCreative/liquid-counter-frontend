@@ -30,6 +30,7 @@ function ItemList(props) {
                                    date={item.date}
                                    _id={item._id}
                                    orderNumber = {index} 
+                                   dat
                                    />)
         })
       }</ul>

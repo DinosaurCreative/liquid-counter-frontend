@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: row;
   gap: 100px;
-  margin: 58px 0 auto
+  margin: 58px auto auto
 }
 
 /* @media screen and (max-width: 1119px){

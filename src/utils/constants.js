@@ -1,5 +1,6 @@
 export const prevInventaTitle = 'Предыдущие инвентаризации';
 export const bottlesDBTitle = 'База данных позиций';
+export const inventaTitle = 'Бар Барбос 21.10.2022 Петров А.С.';
 
 export const bottles = [
   {
@@ -105,3 +106,142 @@ export const inventas = [
     _id: '12g23f45',
   },
 ];
+
+export const inventa = [
+  [
+    {
+      fullBottles: 6,
+      openedBottles: 1,
+      totlaVolume: 4.2,
+      title: 'orabella de Italiano',
+      type: 'white wine',
+      _id: '12332421'
+    },
+    {
+      fullBottles: 6,
+      openedBottles: 1,
+      totlaVolume: 4.2,
+      title: 'orabella de Italiano',
+      type: 'white wine',
+      _id: '12343421'
+    },
+    {
+      fullBottles: 6,
+      openedBottles: 1,
+      totlaVolume: 4.2,
+      title: 'orabella de Italiano',
+      type: 'white wine',
+      _id: '1235421'
+    },
+    {
+      fullBottles: 6,
+      openedBottles: 1,
+      totlaVolume: 4.2,
+      title: 'orabella de Italiano',
+      type: 'white wine',
+      _id: '1234ygf21'
+    },
+  ],
+  [
+    {
+      fullBottles: 6,
+      openedBottles: 1,
+      totlaVolume: 4.2,
+      title: 'Jack',
+      type: 'whiskey',
+      _id: '1233642421'
+    },
+    {
+      fullBottles: 6,
+      openedBottles: 1,
+      totlaVolume: 4.2,
+      title: 'Jack',
+      type: 'whiskey',
+      _id: '123324gb21'
+    },
+    {
+      fullBottles: 6,
+      openedBottles: 1,
+      totlaVolume: 4.2,
+      title: 'Jack',
+      type: 'whiskey',
+      _id: '1233sfg2421'
+    },
+    {
+      fullBottles: 6,
+      openedBottles: 1,
+      totlaVolume: 4.2,
+      title: 'Jack',
+      type: 'whiskey',
+      _id: '1233bgf2421'
+    },
+  ],
+  [
+    {
+      fullBottles: 6,
+      openedBottles: 1,
+      totlaVolume: 4.2,
+      title: 'Cariba',
+      type: 'rum',
+      _id: '1233ert642421'
+    },
+    {
+      fullBottles: 6,
+      openedBottles: 1,
+      totlaVolume: 4.2,
+      title: 'Cariba',
+      type: 'rum',
+      _id: '1233vr24gb21'
+    },
+    {
+      fullBottles: 6,
+      openedBottles: 1,
+      totlaVolume: 4.2,
+      title: 'Cariba',
+      type: 'rum',
+      _id: '1233sfgs2421'
+    },
+    {
+      fullBottles: 6,
+      openedBottles: 1,
+      totlaVolume: 4.2,
+      title: 'Cariba',
+      type: 'rum',
+      _id: '1233bgfff2421'
+    },
+  ],
+  [
+    {
+      fullBottles: 6,
+      openedBottles: 1,
+      totlaVolume: 4.2,
+      title: 'Absolute',
+      type: 'vodka',
+      _id: '1233ert6d42s421'
+    },
+    {
+      fullBottles: 6,
+      openedBottles: 1,
+      totlaVolume: 4.2,
+      title: 'Absolute',
+      type: 'vodka',
+      _id: '1233vr24ggbs21'
+    },
+    {
+      fullBottles: 6,
+      openedBottles: 1,
+      totlaVolume: 4.2,
+      title: 'Absolute',
+      type: 'vodka',
+      _id: '1233sfgs243s21'
+    },
+    {
+      fullBottles: 6,
+      openedBottles: 1,
+      totlaVolume: 4.2,
+      title: 'Absolute',
+      type: 'vodka',
+      _id: '1233bgfff2sl421'
+    },
+  ]
+]

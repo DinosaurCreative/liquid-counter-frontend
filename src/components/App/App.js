@@ -1,6 +1,5 @@
 import { Route, Routes } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-import { prevInventaTitle, bottlesDBTitle } from '../../utils/constants';
 
 import './App.css';
 import Header from '../Header/Header.js';
@@ -14,14 +13,15 @@ import PreviousInventa from '../PreviousInventa/PreviousInventa';
 import ItemDataBase from '../ItemDataBase/ItemDataBase';
 import BottlesData from '../BottlesData/BottlesData';
 import ItemList from '../ItemList/ItemList';
-import { bottles, inventas } from '../../utils/constants';
+import Inventa from '../Inventa/Inventa';
+import { bottles, inventas, prevInventaTitle, bottlesDBTitle, inventaTitle, inventa } from '../../utils/constants';
 
 
 
 function App () {
   const [ bottlesDB, setBottlesDB ] = useState(bottles);
   const [ isMenuOpened, setIsMenuOpened ] = useState(false);
-
+  
 
   // Внутренности компонента previousInventa
   const [ inventarizations, setInventarizations ] = useState(inventas);
@@ -60,16 +60,22 @@ function App () {
     <div className='page'>
       <Header  isMenuOpened = {isMenuOpened}
                setIsMenuOpened = {setIsMenuOpened} />
+      {/* <ItemList component = {Inventa}
+                data = {inventa}
+                title = {inventaTitle}
+                
+                /> */}
 
-      <ItemList component={PreviousInventa}
+      {/* <Main /> */}
+      {/* <ItemList component={PreviousInventa}
                 data={inventarizations}
                 title = {prevInventaTitle}
                 sortByField = {sortByField}
-              />
-      {/* <ItemList component = {BottlesData} 
+              /> */}
+      <ItemList component = {BottlesData} 
                 data = {bottlesDB}
                 title = {bottlesDBTitle}
-                /> */}
+                />
       <Footer />
     </div>
   );
