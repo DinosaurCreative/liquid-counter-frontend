@@ -13,8 +13,10 @@ function ItemList(props) {
         <button className='itemList__sort-data-btn' type='button' id='nameInCharge' onClick={sortedByFieldHandler}>Ответственный &#9660;</button> 
       </div> */}
       <ul className='itemList__list'>{
+        
         props.data.map((item, index) => {
           return (<props.component key={item._id}
+                                   props = {item}
                                    title={item.title}
                                    volume={item.volume}
                                    capWeight={item.capWeight}
@@ -30,7 +32,6 @@ function ItemList(props) {
                                    date={item.date}
                                    _id={item._id}
                                    orderNumber = {index} 
-                                   dat
                                    />)
         })
       }</ul>

@@ -1,0 +1,10 @@
+.inventa__drink-list {
+  overflow: hidden;
+  list-style-type: none;
+  padding: 0 13px;
+  max-height: 0px;
+  transition: all .3s linear;
+  margin-top: 20px;
+  background-color: #6a6a6a9a;
+  border-radius: 10px;
+}

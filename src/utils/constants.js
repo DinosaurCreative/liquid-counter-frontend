@@ -107,8 +107,11 @@ export const inventas = [
   },
 ];
 
-export const inventa = [
-  [
+export const inventa = {
+  date: '29.05.2021',
+  nameInCharge: "Viniamin",
+  _id: 123454321,
+  inventaData: [
     {
       fullBottles: 6,
       openedBottles: 1,
@@ -141,8 +144,6 @@ export const inventa = [
       type: 'white wine',
       _id: '1234ygf21'
     },
-  ],
-  [
     {
       fullBottles: 6,
       openedBottles: 1,
@@ -175,8 +176,6 @@ export const inventa = [
       type: 'whiskey',
       _id: '1233bgf2421'
     },
-  ],
-  [
     {
       fullBottles: 6,
       openedBottles: 1,
@@ -209,8 +208,6 @@ export const inventa = [
       type: 'rum',
       _id: '1233bgfff2421'
     },
-  ],
-  [
     {
       fullBottles: 6,
       openedBottles: 1,
@@ -244,4 +241,4 @@ export const inventa = [
       _id: '1233bgfff2sl421'
     },
   ]
-]
+}

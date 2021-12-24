@@ -60,11 +60,12 @@ function App () {
     <div className='page'>
       <Header  isMenuOpened = {isMenuOpened}
                setIsMenuOpened = {setIsMenuOpened} />
-      {/* <ItemList component = {Inventa}
+      <ItemList component = {Inventa}
                 data = {inventa}
                 title = {inventaTitle}
                 
-                /> */}
+                
+                />
 
       {/* <Main /> */}
       {/* <ItemList component={PreviousInventa}
@@ -72,10 +73,10 @@ function App () {
                 title = {prevInventaTitle}
                 sortByField = {sortByField}
               /> */}
-      <ItemList component = {BottlesData} 
+      {/* <ItemList component = {BottlesData} 
                 data = {bottlesDB}
                 title = {bottlesDBTitle}
-                />
+                /> */}
       <Footer />
     </div>
   );

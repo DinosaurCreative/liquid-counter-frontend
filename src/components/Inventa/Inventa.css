@@ -1,1 +1,7 @@
 @import url(./inventa/inventa.css);
+@import url(./inventa/__drink-list/inventa__drink-list.css);
+@import url(./inventa/__drink-item/inventa__drink-item.css);
+@import url(./inventa/__container/inventa__container.css);
+@import url(./inventa/__alco-type/inventa__alco-type.css);
+@import url(./inventa/__open-list-checkbox/inventa__open-list-checkbox.css);
+/* @import url(./inventa); */

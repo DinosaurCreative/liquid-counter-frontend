@@ -1,0 +1,22 @@
+.inventa__drink-item {
+  color: #AFADAD;
+  line-height: 30px;
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+}
+
+.inventa__drink-item::after {
+  content: '';
+  border: 1px solid #afadad80;
+  margin: 15px 0;
+}
+
+.inventa__drink-item:last-of-type:after {
+  content: '';
+  border: none;
+}
+
+.inventa__drink-item:first-of-type {
+  margin-top: 20px;
+}

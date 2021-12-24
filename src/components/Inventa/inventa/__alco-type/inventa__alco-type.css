@@ -1,0 +1,21 @@
+.inventa__alco-type {
+  background-color: #97A7B6;
+  max-width: 350px;
+  width: 100%;
+  padding: 15px 10px 15px;
+  color: #000;
+  font-size: 35px;
+  font-weight: 400;
+  border-radius: 15px;
+  margin: 20px auto 10px 0;
+  cursor: pointer;
+  transition: all .1s ease-in;
+}
+
+.inventa__alco-type:hover {
+  background-color: #cbe0f1;
+}
+
+.inventa__alco-type:active {
+  background-color: #79b2cf;
+}

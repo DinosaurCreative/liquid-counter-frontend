@@ -1,0 +1,10 @@
+.inventa {
+  display: flex;
+  flex-direction: column;
+}
+
+.inventa::after {
+  content: '';
+  border: 1px solid #d7a700;
+  margin-top: 10px;
+}
