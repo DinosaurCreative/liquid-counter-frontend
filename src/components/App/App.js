@@ -61,7 +61,7 @@ function App () {
       <Header  isMenuOpened = {isMenuOpened}
                setIsMenuOpened = {setIsMenuOpened} />
       <ItemList component = {Inventa}
-                data = {inventa}
+                data = {inventas}
                 title = {inventaTitle}
                 
                 

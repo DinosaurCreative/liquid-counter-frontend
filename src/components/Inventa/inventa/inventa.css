@@ -6,5 +6,6 @@
 .inventa::after {
   content: '';
   border: 1px solid #d7a700;
-  margin-top: 10px;
+  width: 99%;
+  margin: 0 auto;
 }
