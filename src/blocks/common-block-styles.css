@@ -14,9 +14,12 @@
 @import url(./form/__error-span/form__error-span.css);
 @import url(./form/__container/form__container.css);
 @import url(./form/__submit-button/_place/form__submit-button_place_login.css);
+@import url(./form/__submit-button/_place/form__submit-button_place_addManually.css);
 @import url(./form/__submit-button/_place/form__submit-button_place_register.css);
 @import url(./form/_place/form_place_addItem.css);
+@import url(./form/_place/form_place_addManually.css);
 @import url(./form/__input/_place/form__input_place_addItem.css);
+@import url(./form/__input/_place/form__input_place_addManually.css);
 @import url(./form/__error-span/_place/form__error-span_place_addItem.css);
 @import url(./form/__submit-button/_place/form__submit-button_place_addItem.css);
 

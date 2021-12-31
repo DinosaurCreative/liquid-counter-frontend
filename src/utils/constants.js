@@ -1,6 +1,7 @@
 export const prevInventaTitle = 'Предыдущие инвентаризации';
 export const bottlesDBTitle = 'База данных позиций';
 export const inventaTitle = 'Бар Барбос 21.10.2022 Петров А.С.';
+export const addManuallyMessage = 'Сейчас нужно внести данные вручную, а мы постараемся добавить их как можно скорее';
 
 export const bottles = [
   {

@@ -1,0 +1,8 @@
+.addManually {
+  display: flex;
+  flex-direction: row;
+  width: auto;
+  width: fit-content;
+  column-gap: 20px;
+  margin: auto 0;
+}

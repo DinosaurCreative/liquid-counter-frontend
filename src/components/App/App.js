@@ -14,6 +14,7 @@ import ItemDataBase from '../ItemDataBase/ItemDataBase';
 import BottlesData from '../BottlesData/BottlesData';
 import ItemList from '../ItemList/ItemList';
 import Inventa from '../Inventa/Inventa';
+import AddManually from '../AddManually/AddManually';
 import { bottles, inventas, prevInventaTitle, bottlesDBTitle, inventaTitle, inventa } from '../../utils/constants';
 
 
@@ -86,11 +87,12 @@ function App () {
     <div className='page'>
       <Header  isMenuOpened = {isMenuOpened}
                setIsMenuOpened = {setIsMenuOpened} />
-
-      <ItemList component = {Inventa}
+      {/* <Login />  */}
+      <AddManually />
+      {/* <ItemList component = {Inventa}
                 data = {prepareInventaDataForDisplayingHandler(inventa)}
                 title = {inventa.nameInCharge + ' // ' +  inventa.barName + ' // ' + inventa.date}                
-                />
+                /> */}
 
       {/* <Main /> */}
       {/* <ItemList component={PreviousInventa}
