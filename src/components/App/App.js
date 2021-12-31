@@ -1,5 +1,5 @@
 import { Route, Routes } from 'react-router-dom';
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 
 import './App.css';
 import Header from '../Header/Header.js';
@@ -21,6 +21,7 @@ import { bottles, inventas, prevInventaTitle, bottlesDBTitle, inventaTitle, inve
 function App () {
   const [ bottlesDB, setBottlesDB ] = useState(bottles);
   const [ isMenuOpened, setIsMenuOpened ] = useState(false);
+  const [ sortedInventa, setSortedInventa ] = useState({});
   
 
   // Внутренности компонента previousInventa
@@ -54,17 +55,41 @@ function App () {
       setSortedBy(id);
     }
     // Внутренности компонента previousInventa
+  
+  function countAlcoTypesInInventaHandler(prop) {
+    const types = prop.inventaData.map(e => e.alcoType);
+    const result = types.filter((item, pos) => types.indexOf(item) === pos);
+
+    return result;
+  };
+
+
+  function prepareInventaDataForDisplayingHandler(prop) {
+    const alcoTypes = countAlcoTypesInInventaHandler(prop);
+    const result = [];
+    alcoTypes.forEach((item, index) => {
+      result[index] = { type: item, values: [] };
+    })
     
+    for (let i = 0; i < prop.inventaData.length; i++) {
+      for(let k = 0; k < result.length; k++) {
+        if(result[k].type === prop.inventaData[i].alcoType){
+          result[k].values.push(prop.inventaData[i]);
+          break;
+        }
+      }
+    }
+    return result;
+  }
 
   return (
     <div className='page'>
       <Header  isMenuOpened = {isMenuOpened}
                setIsMenuOpened = {setIsMenuOpened} />
+
       <ItemList component = {Inventa}
-                data = {inventas}
-                title = {inventaTitle}
-                
-                
+                data = {prepareInventaDataForDisplayingHandler(inventa)}
+                title = {inventa.nameInCharge + ' // ' +  inventa.barName + ' // ' + inventa.date}                
                 />
 
       {/* <Main /> */}

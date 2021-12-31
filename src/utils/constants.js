@@ -10,7 +10,7 @@ export const bottles = [
     fullWeight: .9,
     emptyWeight: .2,
     barcode: 123456789009876,
-    alcoType: 'whiskey',
+    alcoType: 'Виски',
     label: 'wertyj',
     origin: 'USA',
     btlModel: 'regular',
@@ -23,7 +23,7 @@ export const bottles = [
     fullWeight: .9,
     emptyWeight: .2,
     barcode: 123456789009876,
-    alcoType: 'whiskey',
+    alcoType: 'Виски',
     label: 'wertyj',
     origin: 'USA',
     btlModel: 'regular',
@@ -108,136 +108,194 @@ export const inventas = [
 ];
 
 export const inventa = {
+  nameInCharge: 'Viniamin',
+  barName: 'Codlin Bar',
   date: '29.05.2021',
-  nameInCharge: "Viniamin",
   _id: 123454321,
+  creator: 'Viniamin',
   inventaData: [
     {
       fullBottles: 6,
       openedBottles: 1,
-      totlaVolume: 4.2,
-      title: 'orabella de Italiano',
-      type: 'white wine',
+      totalVolume: 3.2,
+      title: 'Orabella de Italiano',
+      alcoType: 'Белое вино',
       _id: '12332421'
     },
     {
       fullBottles: 6,
       openedBottles: 1,
-      totlaVolume: 4.2,
+      totalVolume: 3.2,
+      title: 'Orabella de Italiano',
+      alcoType: 'Белое вино',
+      _id: '12332421'
+    },
+    {
+      fullBottles: 6,
+      openedBottles: 1,
+      totalVolume: 3.2,
+      title: 'Orabella de Italiano',
+      alcoType: 'Белое вино',
+      _id: '12332421'
+    },
+    {
+      fullBottles: 6,
+      openedBottles: 1,
+      totalVolume: 3.2,
+      title: 'Orabella de Italiano',
+      alcoType: 'Белое вино',
+      _id: '12332421'
+    },
+    {
+      fullBottles: 6,
+      openedBottles: 1,
+      totalVolume: 3.2,
+      title: 'Orabella de Italiano',
+      alcoType: 'Белое вино',
+      _id: '12332421'
+    },
+    {
+      fullBottles: 6,
+      openedBottles: 1,
+      totalVolume: 3.2,
+      title: 'Orabella de Italiano',
+      alcoType: 'Белое вино',
+      _id: '12332421'
+    },
+    {
+      fullBottles: 6,
+      openedBottles: 1,
+      totalVolume: 3.2,
+      title: 'Orabella de Italiano',
+      alcoType: 'Белое вино',
+      _id: '12332421'
+    },
+    {
+      fullBottles: 6,
+      openedBottles: 1,
+      totalVolume: 3.2,
+      title: 'Orabella de Italiano',
+      alcoType: 'Белое вино',
+      _id: '12332421'
+    },
+    {
+      fullBottles: 6,
+      openedBottles: 1,
+      totalVolume: 2.2,
       title: 'orabella de Italiano',
-      type: 'white wine',
+      alcoType: 'Белое вино',
       _id: '12343421'
     },
     {
       fullBottles: 6,
       openedBottles: 1,
-      totlaVolume: 4.2,
+      totalVolume: 1.2,
       title: 'orabella de Italiano',
-      type: 'white wine',
+      alcoType: 'Белое вино',
       _id: '1235421'
     },
     {
       fullBottles: 6,
       openedBottles: 1,
-      totlaVolume: 4.2,
+      totalVolume: 4.2,
       title: 'orabella de Italiano',
-      type: 'white wine',
+      alcoType: 'Белое вино',
       _id: '1234ygf21'
     },
     {
       fullBottles: 6,
       openedBottles: 1,
-      totlaVolume: 4.2,
+      totalVolume: 4.2,
       title: 'Jack',
-      type: 'whiskey',
+      alcoType: 'Виски',
       _id: '1233642421'
     },
     {
       fullBottles: 6,
       openedBottles: 1,
-      totlaVolume: 4.2,
+      totalVolume: 4.2,
       title: 'Jack',
-      type: 'whiskey',
+      alcoType: 'Виски',
       _id: '123324gb21'
     },
     {
       fullBottles: 6,
       openedBottles: 1,
-      totlaVolume: 4.2,
+      totalVolume: 4.2,
       title: 'Jack',
-      type: 'whiskey',
+      alcoType: 'Виски',
       _id: '1233sfg2421'
     },
     {
       fullBottles: 6,
       openedBottles: 1,
-      totlaVolume: 4.2,
+      totalVolume: 4.2,
       title: 'Jack',
-      type: 'whiskey',
+      alcoType: 'Виски',
       _id: '1233bgf2421'
     },
     {
       fullBottles: 6,
       openedBottles: 1,
-      totlaVolume: 4.2,
+      totalVolume: 4.2,
       title: 'Cariba',
-      type: 'rum',
+      alcoType: 'Ром',
       _id: '1233ert642421'
     },
     {
       fullBottles: 6,
       openedBottles: 1,
-      totlaVolume: 4.2,
+      totalVolume: 4.2,
       title: 'Cariba',
-      type: 'rum',
+      alcoType: 'Ром',
       _id: '1233vr24gb21'
     },
     {
       fullBottles: 6,
       openedBottles: 1,
-      totlaVolume: 4.2,
+      totalVolume: 4.2,
       title: 'Cariba',
-      type: 'rum',
+      alcoType: 'Ром',
       _id: '1233sfgs2421'
     },
     {
       fullBottles: 6,
       openedBottles: 1,
-      totlaVolume: 4.2,
+      totalVolume: 4.2,
       title: 'Cariba',
-      type: 'rum',
+      alcoType: 'Ром',
       _id: '1233bgfff2421'
     },
     {
       fullBottles: 6,
       openedBottles: 1,
-      totlaVolume: 4.2,
+      totalVolume: 4.2,
       title: 'Absolute',
-      type: 'vodka',
+      alcoType: 'Водка',
       _id: '1233ert6d42s421'
     },
     {
       fullBottles: 6,
       openedBottles: 1,
-      totlaVolume: 4.2,
+      totalVolume: 4.2,
       title: 'Absolute',
-      type: 'vodka',
+      alcoType: 'Водка',
       _id: '1233vr24ggbs21'
     },
     {
       fullBottles: 6,
       openedBottles: 1,
-      totlaVolume: 4.2,
+      totalVolume: 4.2,
       title: 'Absolute',
-      type: 'vodka',
+      alcoType: 'Водка',
       _id: '1233sfgs243s21'
     },
     {
       fullBottles: 6,
       openedBottles: 1,
-      totlaVolume: 4.2,
+      totalVolume: 4.2,
       title: 'Absolute',
-      type: 'vodka',
+      alcoType: 'Водка',
       _id: '1233bgfff2sl421'
     },
   ]
