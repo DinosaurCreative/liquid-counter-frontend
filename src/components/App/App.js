@@ -27,7 +27,8 @@ import {
   emptyRegistration,
   emptyLogin,
   emptyManualBottle,
-  emptyBottle
+  emptyBottle,
+  testBottle,
 } from '../../utils/constants';
 
 
@@ -115,6 +116,17 @@ function App () {
                         isLogged = {isLogged}
                         data = {bottleData}
                         />
+
+        <ProtectedRoute path = '/fix-bottle'
+                        component = {UpdateItem}
+                        setData = {setBottleData}
+                        emptyData = {emptyBottle}
+                        BottleForm = {BottleForm}
+                        isLogged = {isLogged}
+                        data = {bottleData}
+                        testBottle = {testBottle}
+   Update             />
+
         <ProtectedRoute path = '/inventa'
                         component = {ItemList}
                         Inventa = {Inventa}
@@ -134,7 +146,7 @@ function App () {
                   emptyData = {emptyBottle}
                   BottleForm = {BottleForm}
                   /> */}
-      
+
       {/* <AddItem data = {bottleData}
                setData = {setBottleData}
                emptyData = {emptyBottle}
@@ -157,6 +169,7 @@ function App () {
       {/* <Main data = {scaleData}
             setData = {setScaleData}
             /> */}
+
       {/* <ItemList component={PreviousInventa}
                 data={inventarizations}
                 title = {prevInventaTitle}

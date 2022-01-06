@@ -1,10 +1,10 @@
 import { Route, Navigate } from 'react-router-dom';
 
-function ProtectedRoute(props) {
+function ProtectedRoute({ component: Component, ...props }) {
   return (
     <Route>
       {
-        () => props.isLogged ? <props.component props = {props} /> : <Navigate to = '/'/>
+        () => props.isLogged ? <Component {...props} /> : <Navigate to = '/'/>
       }
     </Route>
   )

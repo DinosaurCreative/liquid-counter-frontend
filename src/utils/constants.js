@@ -17,6 +17,18 @@ export const emptyBottle = {
   barcode: '',
   alcoType: '',
 }
+export const testBottle = {
+  title: 'JackDaniels',
+  volume: 0.7,
+  capWeight: 0.03,
+  country: 'USA',
+  brutto: 1,
+  model: 'Regular',
+  emptyWeight: 0.2,
+  label: 'WWW.address.com',
+  barcode: 123456789098,
+  alcoType: 'whiskey',
+}
 
 export const bottles = [
   {
