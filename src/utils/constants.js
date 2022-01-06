@@ -1,7 +1,22 @@
 export const prevInventaTitle = 'Предыдущие инвентаризации';
 export const bottlesDBTitle = 'База данных позиций';
 export const inventaTitle = 'Бар Барбос 21.10.2022 Петров А.С.';
-export const addManuallyMessage = 'Сейчас нужно внести данные вручную, а мы постараемся добавить их как можно скорее';
+export const addManuallyMessage = 'Сейчас нужно внести данные вручную, а мы постараемся добавить эти позиции как можно скорее';
+export const emptyRegistration = { email: '', password: '', key: '',  name: '' };
+export const emptyLogin = { email: '', password: '' };
+export const emptyManualBottle = { title: '', volume: '', rest: '' };
+export const emptyBottle = {
+  title: '',
+  volume: '',
+  capWeight: '',
+  country: '',
+  brutto: '',
+  model: '',
+  emptyWeight: '',
+  label: '',
+  barcode: '',
+  alcoType: '',
+}
 
 export const bottles = [
   {

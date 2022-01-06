@@ -1,30 +1,44 @@
-function AddItem() {
+// function AddItem({ data, setData, emptyData, BottleForm }) {
+//   function setDataHandler(e) {
+//     setData({ ...data, [e.target.name]: e.target.value})
+//   }
+
+//   function onSubmitHandler(e) {
+//     e.preventDefault();
+//     setData(emptyData);
+//   }
+
+//   return (
+//     <div className='addItem'>
+//       <h1 className='component-title'>Добавить позицию</h1>
+//       {
+//         <BottleForm data = {data}
+//                     onSubmitHandler = {onSubmitHandler}
+//                     setDataHandler = {setDataHandler}
+//                     />
+//       }
+//     </div>
+//   )
+// }
+function AddItem(props) {
+  function setDataHandler(e) {
+    props.props.setData({ ...props.props.data, [e.target.name]: e.target.value})
+  }
+
+  function onSubmitHandler(e) {
+    e.preventDefault();
+    props.props.setData(props.props.emptyData);
+  }
+
   return (
     <div className='addItem'>
       <h1 className='component-title'>Добавить позицию</h1>
-      <form className='form form_place_addItem' type='submit'>
-        <input className='form__input form__input_place_addItem' placeholder='Наименование позиции'/>
-        <span className='form__error-span form__error-span_place_addItem'>12345678</span>
-        <input className='form__input form__input_place_addItem' placeholder='Объём'/>
-        <span className='form__error-span form__error-span_place_addItem'></span>
-        <input className='form__input form__input_place_addItem' placeholder='Объём'/>
-        <span className='form__error-span form__error-span_place_addItem'></span>
-        <input className='form__input form__input_place_addItem' placeholder='Страна производства'/>
-        <span className='form__error-span form__error-span_place_addItem'></span>
-        <input className='form__input form__input_place_addItem' placeholder='Вес закрытой бутылки'/>
-        <span className='form__error-span form__error-span_place_addItem'></span>
-        <input className='form__input form__input_place_addItem' placeholder='Модель бутылки'/>
-        <span className='form__error-span form__error-span_place_addItem'></span>
-        <input className='form__input form__input_place_addItem' placeholder='Вес пустой бутылки'/>
-        <span className='form__error-span form__error-span_place_addItem'></span>
-        <input className='form__input form__input_place_addItem' placeholder='Этикетка'/>
-        <span className='form__error-span form__error-span_place_addItem'></span>
-        <input className='form__input form__input_place_addItem' placeholder='Штрих-код'/>
-        <span className='form__error-span form__error-span_place_addItem'></span>
-        <input className='form__input form__input_place_addItem' placeholder='Тип алкоголя'/>
-        <span className='form__error-span form__error-span_place_addItem'></span>
-        <button className='form__submit-button form__submit-button_place_addItem' type='submit'>Создать</button>
-      </form>
+      {
+        <props.props.BottleForm props = {props.props}
+                                setDataHandler = {setDataHandler}
+                                onSubmitHandler = {onSubmitHandler}
+                                />
+      }
     </div>
   )
 }

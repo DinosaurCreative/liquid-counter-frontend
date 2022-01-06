@@ -1,3 +1,5 @@
 .form_place_addManually {
-  
+  max-width: 311px;
+  width: 100%;
+  row-gap: 13px;
 }

@@ -1,4 +1,4 @@
-import { Route, Routes } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import { useCallback, useEffect, useState } from 'react';
 
 import './App.css';
@@ -15,15 +15,33 @@ import BottlesData from '../BottlesData/BottlesData';
 import ItemList from '../ItemList/ItemList';
 import Inventa from '../Inventa/Inventa';
 import AddManually from '../AddManually/AddManually';
-import { bottles, inventas, prevInventaTitle, bottlesDBTitle, inventaTitle, inventa } from '../../utils/constants';
+import BottleForm from '../BottleForm/BottleForm';
+import ProtectedRoute from '../ProtectedRoute/ProtectedRoute';
+import { 
+  bottles,
+  inventas,
+  prevInventaTitle,
+  bottlesDBTitle,
+  inventaTitle,
+  inventa,
+  emptyRegistration,
+  emptyLogin,
+  emptyManualBottle,
+  emptyBottle
+} from '../../utils/constants';
 
 
 
 function App () {
+  const [ isLogged, setIsLogged ] = useState(true);
   const [ bottlesDB, setBottlesDB ] = useState(bottles);
   const [ isMenuOpened, setIsMenuOpened ] = useState(false);
   const [ sortedInventa, setSortedInventa ] = useState({});
-  
+  const [ manualBottleData, setManualBottleData ] = useState(emptyManualBottle);
+  const [ bottleData, setBottleData ] = useState(emptyBottle);
+  const [ loginData, setLoginData ] = useState(emptyLogin);
+  const [ registerData, setRegisterData ] = useState(emptyRegistration);
+  const [ scaleData, setScaleData ] = useState('');
 
   // Внутренности компонента previousInventa
   const [ inventarizations, setInventarizations ] = useState(inventas);
@@ -86,15 +104,59 @@ function App () {
   return (
     <div className='page'>
       <Header  isMenuOpened = {isMenuOpened}
-               setIsMenuOpened = {setIsMenuOpened} />
-      {/* <Login />  */}
-      <AddManually />
+               setIsMenuOpened = {setIsMenuOpened}
+               />
+      <Switch>
+        <ProtectedRoute path = '/bottles'
+                        component = {AddItem}
+                        setData = {setBottleData}
+                        emptyData = {emptyBottle}
+                        BottleForm = {BottleForm}
+                        isLogged = {isLogged}
+                        data = {bottleData}
+                        />
+        <ProtectedRoute path = '/inventa'
+                        component = {ItemList}
+                        Inventa = {Inventa}
+                        data = {prepareInventaDataForDisplayingHandler(inventa)}
+                        title = {inventa.nameInCharge + ' // ' +  inventa.barName + ' // ' + inventa.date}        
+                        isLogged = {isLogged}
+                        />
+      </Switch>
+
       {/* <ItemList component = {Inventa}
                 data = {prepareInventaDataForDisplayingHandler(inventa)}
                 title = {inventa.nameInCharge + ' // ' +  inventa.barName + ' // ' + inventa.date}                
                 /> */}
 
-      {/* <Main /> */}
+      {/* <UpdateItem data = {bottleData}
+                  setData = {setBottleData}
+                  emptyData = {emptyBottle}
+                  BottleForm = {BottleForm}
+                  /> */}
+      
+      {/* <AddItem data = {bottleData}
+               setData = {setBottleData}
+               emptyData = {emptyBottle}
+               BottleForm = {BottleForm}
+               /> */}
+
+      {/* <Login data = {loginData}
+             setData = {setLoginData}
+             />  */}
+             
+      {/* <Registration data = {registerData}
+                    setData = {setRegisterData}
+                    /> */}
+
+      {/* <AddManually data={manualBottleData}
+                   setData={setManualBottleData}
+                   emptyData = {emptyManualBottle}/> */}
+
+
+      {/* <Main data = {scaleData}
+            setData = {setScaleData}
+            /> */}
       {/* <ItemList component={PreviousInventa}
                 data={inventarizations}
                 title = {prevInventaTitle}

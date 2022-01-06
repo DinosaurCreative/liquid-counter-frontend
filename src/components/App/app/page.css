@@ -8,4 +8,6 @@
   text-decoration: none;
   margin: auto;
   font-family: 'Inter', 'Roboto', 'sans-serif';
+  justify-content: space-between;
+  position: relative;
 }

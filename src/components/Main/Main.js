@@ -1,4 +1,7 @@
-function Main () {
+function Main ({ data, setData }) {
+  function setDataHandler(e) {
+    setData({ ...data, [e.target.name]: e.target.value})
+  }
   return (
     <div className='main'>
       {/* <h1 className='main__nothing-scanded-msg'>Отсканируйте штрих-код</h1> */}
@@ -53,7 +56,7 @@ function Main () {
           </label>
           <form className='main__calculator-form' >
             <button className='main__form-btn'>Рассчитать</button>
-            <input className='main__form-input' type='text' placeholder='Введите показания весов' />
+            <input className='main__form-input' type='text' value={data.scaleData} name='scaleData' onChange={setDataHandler} placeholder='Введите показания весов' />
             <p className='main__form-result'>{`Результат: 1,56`}</p>
           </form>
         </div>

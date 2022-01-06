@@ -1,18 +1,22 @@
 import { Link } from "react-router-dom";
 
-function Registration() {
+function Registration({ data, setData }) {
+  function onChangeHandler(e) {
+    setData({ ...data, [e.target.name]: e.target.value });
+  };
+
   return (
     <div className='registration'>
       <div className='form__container'>
         <h1 className='form__title'>{'Регистрация'}</h1>
         <form className='form' type='submit'>
-          <input className='form__input' type='text' placeholder='Имя'/>
+          <input className='form__input' value={data.text} name='name' onChange={onChangeHandler} type='text' placeholder='Имя'/>
           <span className='form__error-span'>Чета не то</span>
-          <input className='form__input' type='email' placeholder='E-mail'/>
+          <input className='form__input' value={data.email} name='email' onChange={onChangeHandler} type='email' placeholder='E-mail'/>
           <span className='form__error-span'></span>
-          <input className='form__input' type='Password' placeholder='Пароль'/>
+          <input className='form__input' value={data.password} name='password' onChange={onChangeHandler} type='password' placeholder='Пароль'/>
           <span className='form__error-span'></span>
-          <input className='form__input' type='text' placeholder='Секретный ключ'/>
+          <input className='form__input' value={data.text} name='key' onChange={onChangeHandler} type='text' placeholder='Секретный ключ'/>
           <span className='form__error-span'></span>
           <button className='form__submit-button form__submit-button_place_register' type='submit'>{'Зарегистрироваться'}</ button>
         </form>
