@@ -108,6 +108,16 @@ function App () {
                setIsMenuOpened = {setIsMenuOpened}
                />
       <Switch>
+        <Login path = '/signin' 
+              data = {loginData}
+              setData = {setLoginData}
+              /> 
+        
+        <Registration path = '/signup'
+                      data = {registerData}
+                      setData = {setRegisterData}
+                      />
+ 
         <ProtectedRoute path = '/bottles'
                         component = {AddItem}
                         setData = {setBottleData}
@@ -125,63 +135,95 @@ function App () {
                         isLogged = {isLogged}
                         data = {bottleData}
                         testBottle = {testBottle}
-   Update             />
+                        />
 
         <ProtectedRoute path = '/inventa'
                         component = {ItemList}
-                        Inventa = {Inventa}
+                        innerComponent = {Inventa}
                         data = {prepareInventaDataForDisplayingHandler(inventa)}
                         title = {inventa.nameInCharge + ' // ' +  inventa.barName + ' // ' + inventa.date}        
                         isLogged = {isLogged}
                         />
+
+        <ProtectedRoute path = '/previos-inventa'
+                        component = {ItemList}
+                        innerComponent = {PreviousInventa}
+                        data = {inventarizations}
+                        title = {prevInventaTitle}
+                        isLogged = {isLogged}
+                        />
+
+        <ProtectedRoute path = '/create_manually'
+                        component = {AddManually}
+                        data = {manualBottleData}
+                        setData = {setManualBottleData}
+                        emptyData = {emptyManualBottle}
+                        isLogged = {isLogged}
+                        />
+        
+        <ProtectedRoute path = '/main'
+                        component = {Main}
+                        data = {scaleData}
+                        setData = {setScaleData}
+                        isLogged = {isLogged}
+                        />
+
+        <ProtectedRoute path = '/bottles-data'
+                        component = {ItemList}
+                        innerComponent = {BottlesData}
+                        data = {bottlesDB}
+                        title = {bottlesDBTitle}
+                        isLogged = {isLogged}
+                        />
+
+        <ProtectedRoute path = '/bottles-data'
+                        component = {ItemList}
+                        innerComponent = {BottlesData}
+                        data = {bottlesDB}
+                        title = {bottlesDBTitle}
+                        isLogged = {isLogged}
+                        />
+
       </Switch>
-
-      {/* <ItemList component = {Inventa}
-                data = {prepareInventaDataForDisplayingHandler(inventa)}
-                title = {inventa.nameInCharge + ' // ' +  inventa.barName + ' // ' + inventa.date}                
-                /> */}
-
-      {/* <UpdateItem data = {bottleData}
-                  setData = {setBottleData}
-                  emptyData = {emptyBottle}
-                  BottleForm = {BottleForm}
-                  /> */}
-
-      {/* <AddItem data = {bottleData}
-               setData = {setBottleData}
-               emptyData = {emptyBottle}
-               BottleForm = {BottleForm}
-               /> */}
-
-      {/* <Login data = {loginData}
-             setData = {setLoginData}
-             />  */}
-             
-      {/* <Registration data = {registerData}
-                    setData = {setRegisterData}
-                    /> */}
-
-      {/* <AddManually data={manualBottleData}
-                   setData={setManualBottleData}
-                   emptyData = {emptyManualBottle}/> */}
-
-
-      {/* <Main data = {scaleData}
-            setData = {setScaleData}
-            /> */}
-
-      {/* <ItemList component={PreviousInventa}
-                data={inventarizations}
-                title = {prevInventaTitle}
-                sortByField = {sortByField}
-              /> */}
-      {/* <ItemList component = {BottlesData} 
-                data = {bottlesDB}
-                title = {bottlesDBTitle}
-                /> */}
       <Footer />
     </div>
   );
 };
 
 export default App;
+
+{/* <ItemList component = {BottlesData} 
+          data = {bottlesDB}
+          title = {bottlesDBTitle}
+          /> */}
+
+{/* <Main data = {scaleData}
+      setData = {setScaleData}
+      /> */}
+
+      {/* <AddManually data={manualBottleData}
+                   setData={setManualBottleData}
+                   emptyData = {emptyManualBottle}/> */}
+
+{/* <AddItem data = {bottleData}
+         setData = {setBottleData}
+         emptyData = {emptyBottle}
+         BottleForm = {BottleForm}
+         /> */}
+
+{/* <UpdateItem data = {bottleData}
+            setData = {setBottleData}
+            emptyData = {emptyBottle}
+            BottleForm = {BottleForm}
+            /> */}
+
+{/* <ItemList component = {Inventa}
+data = {prepareInventaDataForDisplayingHandler(inventa)}
+title = {inventa.nameInCharge + ' // ' +  inventa.barName + ' // ' + inventa.date}                
+/> */}
+
+{/* <ItemList component={PreviousInventa}
+          data={inventarizations}
+          title = {prevInventaTitle}
+          sortByField = {sortByField}
+        /> */}

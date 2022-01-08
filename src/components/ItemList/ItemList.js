@@ -14,7 +14,7 @@ function ItemList(props) {
       </div>}
       <ul className='itemList__list'>{
         props.data.map((item, index) => {
-          return (<props.component key={item._id ? item._id : index}
+          return (<props.innerComponent key={item._id ? item._id : index}
                                    props = {item}
                                    orderNumber = {index}
                                    />)

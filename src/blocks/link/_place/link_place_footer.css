@@ -1,9 +1,8 @@
 .link_place_footer {
-  font-size: 10px;
   transition: all .15s ease-out;
   color: #A9A9A9;
 }
 
 .link_place_footer:hover {
-  transform: scale(1.4);
+  transform: scale(1.2);
 }

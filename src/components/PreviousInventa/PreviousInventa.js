@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function PreviousInventa(props) {
   return (
       <li className='previousInventa__line'>
@@ -8,8 +10,8 @@ function PreviousInventa(props) {
           <p className='previousInventa__param-title' >{props.props.nameInCharge}</p>
         </div>
         <div className='previousInventa__btn-container'>
-          <button className='previousInventa__open-btn'></button>
-          <button className='previousInventa__delete-btn'></button>
+          <Link className='previousInventa__open-btn' to='/inventa' href='#' />
+          <button className='previousInventa__delete-btn' type='button'></button>
         </div>
       </div>
     </li>

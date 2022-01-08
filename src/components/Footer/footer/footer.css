@@ -1,9 +1,7 @@
 .footer {
   display: flex;
   flex-direction: column;
-}
-
-.footer::before {
-  content: '';
-  border-top: 1px solid #989898;
+  height: 90px;
+  justify-content: center;
+  border-top: 1px solid #98989847;
 }
