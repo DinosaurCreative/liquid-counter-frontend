@@ -1,6 +1,5 @@
 export const prevInventaTitle = 'Предыдущие инвентаризации';
 export const bottlesDBTitle = 'База данных позиций';
-export const inventaTitle = 'Бар Барбос 21.10.2022 Петров А.С.';
 export const addManuallyMessage = 'Сейчас нужно внести данные вручную, а мы постараемся добавить эти позиции как можно скорее';
 export const emptyRegistration = { email: '', password: '', key: '',  name: '' };
 export const emptyLogin = { email: '', password: '' };
@@ -9,8 +8,8 @@ export const emptyBottle = {
   title: '',
   volume: '',
   capWeight: '',
-  country: '',
-  brutto: '',
+  origin: '',
+  fullWeight: '',
   model: '',
   emptyWeight: '',
   label: '',
@@ -21,8 +20,8 @@ export const testBottle = {
   title: 'JackDaniels',
   volume: 0.7,
   capWeight: 0.03,
-  country: 'USA',
-  brutto: 1,
+  origin: 'USA',
+  fullWeight: 1,
   model: 'Regular',
   emptyWeight: 0.2,
   label: 'WWW.address.com',
@@ -41,21 +40,21 @@ export const bottles = [
     alcoType: 'Виски',
     label: 'wertyj',
     origin: 'USA',
-    btlModel: 'regular',
+    model: 'regular',
     _id: '1234567654sfv'
   },
   {
-    title: 'Jack Daniels',
-    volume: 0.7,
+    title: 'Absolute',
+    volume: 1,
     capWeight: 0.05,
-    fullWeight: .9,
+    fullWeight: 1,
     emptyWeight: .2,
     barcode: 123456789009876,
-    alcoType: 'Виски',
+    alcoType: 'Водка',
     label: 'wertyj',
     origin: 'USA',
-    btlModel: 'regular',
-    _id: '1234567w654sfv'
+    model: 'regular',
+    _id: 'skfjnrfelnsv'
   }
 ];
 

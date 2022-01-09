@@ -4,6 +4,7 @@ function ItemList(props) {
   function sortedByFieldHandler(e) {
     props.sortByField(e.target.id);
   }
+  
   return (
     <div className='itemList'>
       <h1 className='itemList__title'>{props.title}</h1>
@@ -17,6 +18,7 @@ function ItemList(props) {
           return (<props.innerComponent key={item._id ? item._id : index}
                                    props = {item}
                                    orderNumber = {index}
+                                   setData = {props.setData} 
                                    />)
         })
       }</ul>

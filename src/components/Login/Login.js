@@ -1,9 +1,12 @@
 import { Link } from "react-router-dom";
+import { useEffect } from "react/cjs/react.development";
 
 function Login({ data, setData }) {
   function onChangeHandler(e) {
     setData({...data, [e.target.name]: e.target.value})
   }
+
+
   return (
     <div className='login'>
       <div className='form__container'>

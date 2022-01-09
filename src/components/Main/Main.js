@@ -1,10 +1,14 @@
-function Main ({ data, setData }) {
+import { Route, Switch, useLocation, useHistory } from 'react-router-dom';
+function Main ({ data, setData, isLogged }) {
+  const history = useHistory();
+  const location = useLocation();
   function setDataHandler(e) {
     setData({ ...data, [e.target.name]: e.target.value})
   }
+
+
   return (
     <div className='main'>
-      {/* <h1 className='main__nothing-scanded-msg'>Отсканируйте штрих-код</h1> */}
         <div className='main__calculator'>
           <div className='main__quantity-container'>
             <p className='main__quantity-board'>Остаток закрытых бутылок: </p>

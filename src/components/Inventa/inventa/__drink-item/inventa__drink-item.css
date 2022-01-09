@@ -18,9 +18,9 @@
   border: none;
 }
 
-.inventa__drink-item:first-of-type {
+/* .inventa__drink-item:first-of-type {
   margin-top: 20px;
-}
+} */
 
 .inventa__drink-item:nth-child(2n) {
   background-color: #6a6a6a60;

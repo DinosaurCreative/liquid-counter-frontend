@@ -1,4 +1,21 @@
+import { Link } from "react-router-dom";
+
 function BottlesData(props) {
+  function getBottleData(e) {
+    props.setData({
+      title: props.props.title, 
+      volume: props.props.volume, 
+      capWeight: props.props.capWeight, 
+      fullWeight: props.props.fullWeight, 
+      emptyWeight: props.props.emptyWeight, 
+      barcode: props.props.barcode, 
+      alcoType: props.props.alcoType, 
+      label: props.props.label, 
+      origin: props.props.origin, 
+      model: props.props.model,
+    })
+  }
+
   return (
     <li className='bottlesData__line'>
       <div className='bottlesData__container'>
@@ -17,10 +34,10 @@ function BottlesData(props) {
               <li className='bottlesData__item-param' id='alco-type'><p className='bottlesData__param-title'>Тип алкоголя: <b>&#8195;{props.props.alcoType}</b></p></li>
               <li className='bottlesData__item-param' id='label'><p className='bottlesData__param-title'>Этикетка: <b>&#8195;{props.props.label}</b></p></li>
               <li className='bottlesData__item-param' id='origin'><p className='bottlesData__param-title'>Страна производства: <b>&#8195;{props.props.origin}</b></p></li>
-              <li className='bottlesData__item-param' id='btl-model'><p className='bottlesData__param-title'>Модель бутылки: <b>&#8195;{props.props.btlModel}</b></p></li>
+              <li className='bottlesData__item-param' id='btl-model'><p className='bottlesData__param-title'>Модель бутылки: <b>&#8195;{props.props.model}</b></p></li>
             </ul>
           </label>
-          <button className='bottlesData__update-btn'></button>
+          <Link className='bottlesData__update-btn' onClick={getBottleData} to='/fix-bottle'></Link>
           <button className='bottlesData__delete-btn'></button>
         </div>
       </div>

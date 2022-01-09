@@ -1,4 +1,4 @@
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, useLocation, useHistory } from 'react-router-dom';
 import { useCallback, useEffect, useState } from 'react';
 
 import './App.css';
@@ -22,7 +22,6 @@ import {
   inventas,
   prevInventaTitle,
   bottlesDBTitle,
-  inventaTitle,
   inventa,
   emptyRegistration,
   emptyLogin,
@@ -43,6 +42,9 @@ function App () {
   const [ loginData, setLoginData ] = useState(emptyLogin);
   const [ registerData, setRegisterData ] = useState(emptyRegistration);
   const [ scaleData, setScaleData ] = useState('');
+  const [ isMainMessageShown, setIsMainMessageShown ] = useState(true);
+  const history = useHistory();
+  const location = useLocation();
 
   // Внутренности компонента previousInventa
   const [ inventarizations, setInventarizations ] = useState(inventas);
@@ -57,6 +59,7 @@ function App () {
       return num;
     }).join('.');
   }
+
   function sortByField(id) {
     if(sortedBy === id) {
       setInventarizations([ ...inventarizations].reverse());
@@ -75,7 +78,16 @@ function App () {
       setSortedBy(id);
     }
     // Внутренности компонента previousInventa
-  
+  function hideMainMessage() {
+    setIsMainMessageShown(false);
+  }
+  useEffect(() => {
+    if(location.pathname !== '/') {
+      setIsMainMessageShown(false);
+      return
+    } 
+    setIsMainMessageShown(true);
+  }, [location.pathname])
   function countAlcoTypesInInventaHandler(prop) {
     const types = prop.inventaData.map(e => e.alcoType);
     const result = types.filter((item, pos) => types.indexOf(item) === pos);
@@ -106,19 +118,24 @@ function App () {
     <div className='page'>
       <Header  isMenuOpened = {isMenuOpened}
                setIsMenuOpened = {setIsMenuOpened}
+               isLogged = {isLogged}
+               location = {location}
                />
+               {isMainMessageShown && isLogged && <h2 className='page__message'>Отсканируйте штрих-код</h2>}
+               { isMainMessageShown && !isLogged && <p className='page__entrance-message'>Обучаемая программа для барной инвентаризации. Войдите или зарегистрируйтесь.</p>}
       <Switch>
-        <Login path = '/signin' 
-              data = {loginData}
-              setData = {setLoginData}
-              /> 
-        
-        <Registration path = '/signup'
-                      data = {registerData}
-                      setData = {setRegisterData}
-                      />
+        {!isLogged && <Route path = '/signin'>
+          <Login data = {loginData}
+                 setData = {setLoginData}
+                 /> 
+        </Route>}
+        {!isLogged && <Route path = '/signup'>
+          <Registration data = {registerData}
+                        setData = {setRegisterData}
+                        />
+        </Route>}
  
-        <ProtectedRoute path = '/bottles'
+        <ProtectedRoute path = '/add-bottle'
                         component = {AddItem}
                         setData = {setBottleData}
                         emptyData = {emptyBottle}
@@ -135,6 +152,7 @@ function App () {
                         isLogged = {isLogged}
                         data = {bottleData}
                         testBottle = {testBottle}
+                        history = {history}
                         />
 
         <ProtectedRoute path = '/inventa'
@@ -145,13 +163,6 @@ function App () {
                         isLogged = {isLogged}
                         />
 
-        <ProtectedRoute path = '/previos-inventa'
-                        component = {ItemList}
-                        innerComponent = {PreviousInventa}
-                        data = {inventarizations}
-                        title = {prevInventaTitle}
-                        isLogged = {isLogged}
-                        />
 
         <ProtectedRoute path = '/create_manually'
                         component = {AddManually}
@@ -174,15 +185,24 @@ function App () {
                         data = {bottlesDB}
                         title = {bottlesDBTitle}
                         isLogged = {isLogged}
+                        setData = {setBottleData}
                         />
 
-        <ProtectedRoute path = '/bottles-data'
+        <ProtectedRoute path = '/previos-inventa'
+                        component = {ItemList}
+                        innerComponent = {PreviousInventa}
+                        data = {inventarizations}
+                        title = {prevInventaTitle}
+                        sortByField = {sortByField}
+                        isLogged = {isLogged}
+                        />
+        {/* <ProtectedRoute path = '/bottles-data'
                         component = {ItemList}
                         innerComponent = {BottlesData}
                         data = {bottlesDB}
                         title = {bottlesDBTitle}
                         isLogged = {isLogged}
-                        />
+                        /> */}
 
       </Switch>
       <Footer />
@@ -191,6 +211,12 @@ function App () {
 };
 
 export default App;
+
+{/* <ItemList component={PreviousInventa}
+          data={inventarizations}
+          title = {prevInventaTitle}
+          sortByField = {sortByField}
+        /> */}
 
 {/* <ItemList component = {BottlesData} 
           data = {bottlesDB}
@@ -221,9 +247,3 @@ export default App;
 data = {prepareInventaDataForDisplayingHandler(inventa)}
 title = {inventa.nameInCharge + ' // ' +  inventa.barName + ' // ' + inventa.date}                
 /> */}
-
-{/* <ItemList component={PreviousInventa}
-          data={inventarizations}
-          title = {prevInventaTitle}
-          sortByField = {sortByField}
-        /> */}

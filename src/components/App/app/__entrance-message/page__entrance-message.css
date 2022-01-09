@@ -1,0 +1,8 @@
+.page__entrance-message {
+  text-align: center;
+  font-size: 35px;
+  max-width: 900px;
+  margin: auto;
+  line-height: 100px;
+  font-weight: 400;
+}

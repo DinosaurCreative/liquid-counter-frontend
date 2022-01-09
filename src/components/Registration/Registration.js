@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { useEffect } from "react/cjs/react.development";
 
 function Registration({ data, setData }) {
   function onChangeHandler(e) {

@@ -1,14 +1,19 @@
 import { addManuallyMessage } from '../../utils/constants';
-
+import { useHistory } from 'react-router-dom';
 function AddManually({ data, setData, emptyData }) {
+
+
   function setDataHandler(e) {
     setData({ ...data, [e.target.name]: e.target.value})
   }
-  
+  const history = useHistory();
+
   function submitHandler(e) {
     e.preventDefault();
     setData(emptyData);
+    history.push('/');
   };
+  
 
   return (
     <div className='addManually'>

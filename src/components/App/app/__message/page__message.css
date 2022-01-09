@@ -1,0 +1,8 @@
+.page__message {
+  font-size: 80px;
+  max-width: 600px;
+  text-align: center;
+  margin: 0 auto;
+  color: #d0d0d06c;
+  font-weight: 400;
+}
