@@ -10,7 +10,7 @@ function Inventa(props) {
         <ul className='inventa__drink-list'>{
           props.props.values.map((item, index) => {
             return (
-              <li className="inventa__drink-item">{`${index + 1}. ${item.title} ,	остаток  - ${item.totalVolume} л. , открытых бутылок - ${item.openedBottles} , полных бутылок - ${item.fullBottles}`}</li>
+              <li className="inventa__drink-item">{`${index + 1}. ${item.title} ,	остаток  - ${item.totalVolume} л. , открытых бутылок - ${item.openedBottle} , полных бутылок - ${item.fullBottle}`}</li>
             )
           })
         }

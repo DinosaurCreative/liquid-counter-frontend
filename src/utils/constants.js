@@ -1,17 +1,22 @@
+export const twoWordsRegexp = /[0-9a-zA-Z]{3,}\W[0-9a-zA-Z]{3,}/;
+export const dateRegexp = /^\s*(3[01]|[12][0-9]|0?[1-9])\.(1[012]|0?[1-9])\.((?:19|20)\d{2})\s*$/g;
+export const passRegexp = /^\S+$/;
+
 export const prevInventaTitle = 'Предыдущие инвентаризации';
 export const bottlesDBTitle = 'База данных позиций';
 export const addManuallyMessage = 'Сейчас нужно внести данные вручную, а мы постараемся добавить эти позиции как можно скорее';
-export const emptyRegistration = { email: '', password: '', key: '',  name: '' };
+export const createInventaHeader = 'Внесите данные';
+export const emptyRegistration = { email: '', password: '', secreteKey: '',  name: '' };
 export const emptyLogin = { email: '', password: '' };
 export const emptyManualBottle = { title: '', volume: '', rest: '' };
 export const emptyBottle = {
   title: '',
   volume: '',
-  capWeight: '',
-  origin: '',
+  bottleCapWeight: '',
+  madeIn: '',
   fullWeight: '',
-  model: '',
-  emptyWeight: '',
+  bottleModel: '',
+  bottleWeight: '',
   label: '',
   barcode: '',
   alcoType: '',
@@ -19,11 +24,11 @@ export const emptyBottle = {
 export const testBottle = {
   title: 'JackDaniels',
   volume: 0.7,
-  capWeight: 0.03,
-  origin: 'USA',
+  bottleCapWeight: 0.03,
+  madeIn: 'USA',
   fullWeight: 1,
-  model: 'Regular',
-  emptyWeight: 0.2,
+  bottleModel: 'Regular',
+  bottleWeight: 0.2,
   label: 'WWW.address.com',
   barcode: 123456789098,
   alcoType: 'whiskey',
@@ -33,27 +38,27 @@ export const bottles = [
   {
     title: 'Jack Daniels',
     volume: 0.7,
-    capWeight: 0.05,
+    bottleCapWeight: 0.05,
     fullWeight: .9,
-    emptyWeight: .2,
+    bottleWeight: .2,
     barcode: 123456789009876,
     alcoType: 'Виски',
     label: 'wertyj',
-    origin: 'USA',
-    model: 'regular',
+    madeIn: 'USA',
+    bottleModel: 'regular',
     _id: '1234567654sfv'
   },
   {
     title: 'Absolute',
     volume: 1,
-    capWeight: 0.05,
+    bottleCapWeight: 0.05,
     fullWeight: 1,
-    emptyWeight: .2,
+    bottleWeight: .2,
     barcode: 123456789009876,
     alcoType: 'Водка',
     label: 'wertyj',
-    origin: 'USA',
-    model: 'regular',
+    madeIn: 'USA',
+    bottleModel: 'regular',
     _id: 'skfjnrfelnsv'
   }
 ];
@@ -85,52 +90,10 @@ export const inventas = [
     _id: '12123f45',
   },
   {
-    nameInCharge: 'Egan',
+    nameInCharge: 'Viniamin',
     barName: 'Codlin Bar',
-    date: '28.12.2031',
-    _id: '1s2345wq',
-  },
-  {
-    nameInCharge: 'Frank',
-    barName: 'BeeBar',
-    date: '31.02.2021',
-    _id: '123d4r5',
-  },
-  {
-    nameInCharge: 'George',
-    barName: 'Anchor Bar',
-    date: '12.01.2021',
-    _id: '12ga345',
-  },
-  {
-    nameInCharge: 'Stas',
-    barName: 'Anchor Bar',
-    date: '12.01.2021',
-    _id: '12g2j345',
-  },
-  {
-    nameInCharge: 'Egan',
-    barName: 'Codlin Bar',
-    date: '28.02.2031',
-    _id: '1s234h5wq',
-  },
-  {
-    nameInCharge: 'Frank',
-    barName: 'BeeBar',
-    date: '21.02.2021',
-    _id: '123d4sr5',
-  },
-  {
-    nameInCharge: 'George',
-    barName: 'Anchor Bar',
-    date: '12.01.2021',
-    _id: '12g34g5',
-  },
-  {
-    nameInCharge: 'Stas',
-    barName: 'Anchor Bar',
-    date: '12.01.2021',
-    _id: '12g23f45',
+    date: '29.05.2021',
+    _id: '123454321',
   },
 ];
 
@@ -138,192 +101,215 @@ export const inventa = {
   nameInCharge: 'Viniamin',
   barName: 'Codlin Bar',
   date: '29.05.2021',
-  _id: 123454321,
+  _id: '123454321',
   creator: 'Viniamin',
   inventaData: [
     {
-      fullBottles: 6,
-      openedBottles: 1,
+      fullBottle: 6,
+      openedBottle: 1,
       totalVolume: 3.2,
       title: 'Orabella de Italiano',
       alcoType: 'Белое вино',
-      _id: '12332421'
+      _id: '12332421',
+      isUnknown: false,
     },
     {
-      fullBottles: 6,
-      openedBottles: 1,
+      fullBottle: 6,
+      openedBottle: 1,
       totalVolume: 3.2,
       title: 'Orabella de Italiano',
       alcoType: 'Белое вино',
-      _id: '12332421'
+      _id: '12332421',
+      isUnknown: false,
     },
     {
-      fullBottles: 6,
-      openedBottles: 1,
+      fullBottle: 6,
+      openedBottle: 1,
       totalVolume: 3.2,
       title: 'Orabella de Italiano',
       alcoType: 'Белое вино',
-      _id: '12332421'
+      _id: '12332421',
+      isUnknown: false,
     },
     {
-      fullBottles: 6,
-      openedBottles: 1,
+      fullBottle: 6,
+      openedBottle: 1,
       totalVolume: 3.2,
       title: 'Orabella de Italiano',
       alcoType: 'Белое вино',
-      _id: '12332421'
+      _id: '12332421',
+      isUnknown: false,
     },
     {
-      fullBottles: 6,
-      openedBottles: 1,
+      fullBottle: 6,
+      openedBottle: 1,
       totalVolume: 3.2,
       title: 'Orabella de Italiano',
       alcoType: 'Белое вино',
-      _id: '12332421'
+      _id: '12332421',
+      isUnknown: false,
     },
     {
-      fullBottles: 6,
-      openedBottles: 1,
+      fullBottle: 6,
+      openedBottle: 1,
       totalVolume: 3.2,
       title: 'Orabella de Italiano',
       alcoType: 'Белое вино',
-      _id: '12332421'
+      _id: '12332421',
+      isUnknown: false,
     },
     {
-      fullBottles: 6,
-      openedBottles: 1,
+      fullBottle: 6,
+      openedBottle: 1,
       totalVolume: 3.2,
       title: 'Orabella de Italiano',
       alcoType: 'Белое вино',
-      _id: '12332421'
+      _id: '12332421',
+      isUnknown: false,
     },
     {
-      fullBottles: 6,
-      openedBottles: 1,
+      fullBottle: 6,
+      openedBottle: 1,
       totalVolume: 3.2,
       title: 'Orabella de Italiano',
       alcoType: 'Белое вино',
-      _id: '12332421'
+      _id: '12332421',
+      isUnknown: false,
     },
     {
-      fullBottles: 6,
-      openedBottles: 1,
+      fullBottle: 6,
+      openedBottle: 1,
       totalVolume: 2.2,
       title: 'orabella de Italiano',
       alcoType: 'Белое вино',
-      _id: '12343421'
+      _id: '12343421',
+      isUnknown: false,
     },
     {
-      fullBottles: 6,
-      openedBottles: 1,
+      fullBottle: 6,
+      openedBottle: 1,
       totalVolume: 1.2,
       title: 'orabella de Italiano',
       alcoType: 'Белое вино',
-      _id: '1235421'
+      _id: '1235421',
+      isUnknown: false,
     },
     {
-      fullBottles: 6,
-      openedBottles: 1,
+      fullBottle: 6,
+      openedBottle: 1,
       totalVolume: 4.2,
       title: 'orabella de Italiano',
       alcoType: 'Белое вино',
-      _id: '1234ygf21'
+      _id: '1234ygf21',
+      isUnknown: false,
     },
     {
-      fullBottles: 6,
-      openedBottles: 1,
+      fullBottle: 6,
+      openedBottle: 1,
       totalVolume: 4.2,
       title: 'Jack',
       alcoType: 'Виски',
-      _id: '1233642421'
+      _id: '1233642421',
+      isUnknown: false,
     },
     {
-      fullBottles: 6,
-      openedBottles: 1,
+      fullBottle: 6,
+      openedBottle: 1,
       totalVolume: 4.2,
       title: 'Jack',
       alcoType: 'Виски',
-      _id: '123324gb21'
+      _id: '123324gb21',
+      isUnknown: false,
     },
     {
-      fullBottles: 6,
-      openedBottles: 1,
+      fullBottle: 6,
+      openedBottle: 1,
       totalVolume: 4.2,
       title: 'Jack',
       alcoType: 'Виски',
-      _id: '1233sfg2421'
+      _id: '1233sfg2421',
+      isUnknown: false,
     },
     {
-      fullBottles: 6,
-      openedBottles: 1,
+      fullBottle: 6,
+      openedBottle: 1,
       totalVolume: 4.2,
       title: 'Jack',
       alcoType: 'Виски',
-      _id: '1233bgf2421'
+      _id: '1233bgf2421',
+      isUnknown: false,
     },
     {
-      fullBottles: 6,
-      openedBottles: 1,
+      fullBottle: 6,
+      openedBottle: 1,
       totalVolume: 4.2,
       title: 'Cariba',
       alcoType: 'Ром',
-      _id: '1233ert642421'
+      _id: '1233ert642421',
+      isUnknown: false,
     },
     {
-      fullBottles: 6,
-      openedBottles: 1,
+      fullBottle: 6,
+      openedBottle: 1,
       totalVolume: 4.2,
       title: 'Cariba',
       alcoType: 'Ром',
-      _id: '1233vr24gb21'
+      _id: '1233vr24gb21',
+      isUnknown: false,
     },
     {
-      fullBottles: 6,
-      openedBottles: 1,
+      fullBottle: 6,
+      openedBottle: 1,
       totalVolume: 4.2,
       title: 'Cariba',
       alcoType: 'Ром',
-      _id: '1233sfgs2421'
+      _id: '1233sfgs2421',
+      isUnknown: false,
     },
     {
-      fullBottles: 6,
-      openedBottles: 1,
+      fullBottle: 6,
+      openedBottle: 1,
       totalVolume: 4.2,
       title: 'Cariba',
       alcoType: 'Ром',
-      _id: '1233bgfff2421'
+      _id: '1233bgfff2421',
+      isUnknown: false,
     },
     {
-      fullBottles: 6,
-      openedBottles: 1,
+      fullBottle: 6,
+      openedBottle: 1,
       totalVolume: 4.2,
       title: 'Absolute',
       alcoType: 'Водка',
-      _id: '1233ert6d42s421'
+      _id: '1233ert6d42s421',
+      isUnknown: false,
     },
     {
-      fullBottles: 6,
-      openedBottles: 1,
+      fullBottle: 6,
+      openedBottle: 1,
       totalVolume: 4.2,
       title: 'Absolute',
       alcoType: 'Водка',
-      _id: '1233vr24ggbs21'
+      _id: '1233vr24ggbs21',
+      isUnknown: false,
     },
     {
-      fullBottles: 6,
-      openedBottles: 1,
+      fullBottle: 6,
+      openedBottle: 1,
       totalVolume: 4.2,
       title: 'Absolute',
       alcoType: 'Водка',
-      _id: '1233sfgs243s21'
+      _id: '1233sfgs243s21',
+      isUnknown: false,
     },
     {
-      fullBottles: 6,
-      openedBottles: 1,
+      fullBottle: 6,
+      openedBottle: 1,
       totalVolume: 4.2,
       title: 'Absolute',
       alcoType: 'Водка',
-      _id: '1233bgfff2sl421'
+      _id: '1233bgfff2sl421',
+      isUnknown: false,
     },
   ]
 }

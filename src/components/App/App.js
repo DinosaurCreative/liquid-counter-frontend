@@ -1,5 +1,5 @@
 import { Route, Switch, useLocation, useHistory } from 'react-router-dom';
-import { useCallback, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import './App.css';
 import Header from '../Header/Header.js';
@@ -10,7 +10,7 @@ import Main from '../Main/Main';
 import AddItem from '../AddItem/AddItem';
 import UpdateItem from '../UpdateItem/UpdateItem';
 import PreviousInventa from '../PreviousInventa/PreviousInventa';
-import ItemDataBase from '../ItemDataBase/ItemDataBase';
+import InventaStart from '../InventaStart/InventaStart';
 import BottlesData from '../BottlesData/BottlesData';
 import ItemList from '../ItemList/ItemList';
 import Inventa from '../Inventa/Inventa';
@@ -43,10 +43,11 @@ function App () {
   const [ registerData, setRegisterData ] = useState(emptyRegistration);
   const [ scaleData, setScaleData ] = useState('');
   const [ isMainMessageShown, setIsMainMessageShown ] = useState(true);
+  const [ newInventaData, setNewInventaData ] = useState({ nameInCharge: '', date: '', barName: 'Some Bar' });
   const history = useHistory();
   const location = useLocation();
-
-  // Внутренности компонента previousInventa
+ 
+// Внутренности компонента previousInventa
   const [ inventarizations, setInventarizations ] = useState(inventas);
   const [ sortedBy, setSortedBy] = useState('');
   function changeDateOrderHandler(date) {
@@ -144,6 +145,13 @@ function App () {
                         data = {bottleData}
                         />
 
+        <ProtectedRoute path = '/new-inventa'
+                        component={InventaStart}
+                        isLogged = {isLogged}
+                        setData = {setNewInventaData}
+                        data = {newInventaData}
+                        />
+        
         <ProtectedRoute path = '/fix-bottle'
                         component = {UpdateItem}
                         setData = {setBottleData}

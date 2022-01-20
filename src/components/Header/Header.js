@@ -33,7 +33,7 @@ function Header(props) {
               <Link className='header__navigation-link' to='/previos-inventa'>Список инвентаризаций</Link>
               <Link className='header__navigation-link' to='/bottles-data'>База данных</Link>
               <Link className='header__navigation-link' to='/add-bottle'>Добавить позицию</Link>
-              <Link className='header__navigation-link' to='#'>Начать инвентаризацию</Link>
+              <Link className='header__navigation-link' to='/new-inventa'>Начать инвентаризацию</Link>
             </div>
           </div>
         </nav>}
