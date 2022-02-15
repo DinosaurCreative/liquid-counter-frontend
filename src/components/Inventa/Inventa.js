@@ -9,8 +9,9 @@ function Inventa(props) {
         <input className="inventa__open-list-checkbox" type='checkbox' id={checkboxId}></input>
         <ul className='inventa__drink-list'>{
           props.props.values.map((item, index) => {
+            console.log(item)
             return (
-              <li className="inventa__drink-item">{`${index + 1}. ${item.title} ,	остаток  - ${item.totalVolume} л. , открытых бутылок - ${item.openedBottle} , полных бутылок - ${item.fullBottle}`}</li>
+              <li className="inventa__drink-item" key={index}>{`${index + 1}. ${item.title} ,	остаток  - ${item.totalVolume} л. , открытых бутылок - ${item.openedBottle} , полных бутылок - ${item.fullBottle}`}</li>
             )
           })
         }

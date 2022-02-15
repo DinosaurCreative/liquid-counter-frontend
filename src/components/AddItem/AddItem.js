@@ -1,6 +1,6 @@
 // this syntax is for the regular usage
 
-import { useEffect } from "react/cjs/react.development";
+// import { useEffect } from "react/cjs/react.development";
 
 // function AddItem({ data, setData, emptyData, BottleForm }) {
 //   function setDataHandler(e) {

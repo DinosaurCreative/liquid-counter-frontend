@@ -33,7 +33,7 @@ import {
 
 
 function App () {
-  const [ isLogged, setIsLogged ] = useState(true);
+  const [ isLogged, setIsLogged ] = useState(false);
   const [ bottlesDB, setBottlesDB ] = useState(bottles);
   const [ isMenuOpened, setIsMenuOpened ] = useState(false);
   const [ sortedInventa, setSortedInventa ] = useState({});
@@ -114,6 +114,7 @@ function App () {
     }
     return result;
   }
+  
 
   return (
     <div className='page'>
