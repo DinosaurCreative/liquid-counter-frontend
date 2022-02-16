@@ -17,6 +17,7 @@ import Inventa from '../Inventa/Inventa';
 import AddManually from '../AddManually/AddManually';
 import BottleForm from '../BottleForm/BottleForm';
 import ProtectedRoute from '../ProtectedRoute/ProtectedRoute';
+import WrongPath from '../WrongPath/WrongPath';
 import { 
   bottles,
   inventas,
@@ -36,17 +37,10 @@ function App () {
   const history = useHistory();
   const location = useLocation();
 
-
-
-
-
-
   const [ isLogged, setIsLogged ] = useState(true);
   const [ bottlesDB, setBottlesDB ] = useState(bottles);
   const [ isMenuOpened, setIsMenuOpened ] = useState(false);
-  
-  const [ manualBottleData, setManualBottleData ] = useState(emptyManualBottle);
-  
+  const [ manualBottleData, setManualBottleData ] = useState(emptyManualBottle);  
   const [ bottleData, setBottleData ] = useState(emptyBottle);
   const [ loginData, setLoginData ] = useState(emptyLogin);
   const [ registerData, setRegisterData ] = useState(emptyRegistration);
@@ -58,12 +52,6 @@ function App () {
   // Внутренности компонента previousInventa
   const [ inventarizations, setInventarizations ] = useState(inventas);
   const [ sortedBy, setSortedBy] = useState('');
-
-  // Говорит показывать ли сообщение при открытии "/" - маршрута. ОТ статуса isLogged завсисит какоем именно сообщение показываетсыя.
-  // useEffect(() => {
-  //   if(location.pathname !== '/') return;
-  //   setIsMainMessageShown(false);
-  // }, [])
 
 
   function changeDateOrderHandler(date) {
@@ -96,51 +84,14 @@ function App () {
   }
 
 
-  // Внутренности компонента previousInventa
-
-  // const compose = (...fns) => (arg) => fns.reduce((composed, f) => f(composed), arg)
-
-  // const getAlcoTypes = prop => prop.inventaData.map(e => e.alcoType);
-
-  // const filterOriginalAlcotypes = prop => prop.filter((item, pos) => prop.indexOf(item) === pos);  
-
-  // const countAlcoTypesInInventaHandler = prop => compose( getAlcoTypes, filterOriginalAlcotypes)(prop);
-
-// реализация варианта, когда просчитывается данные в виде {type: item, values: []}
-  // const createInstanceListOfAlcotype = (prop) => {
-  //   return prop.map(item =>  {
-  //     console.log({[item]: []})
-  //     return {
-  //       type: item,
-  //       values: []
-  //     }
-  //   })
-  // }
-  // реализация варианта, когда просчитывается данные в виде {type: item, values: []}
-  // const putIventaBalances = (val, prop, index) => {
-  //   for(let i = 0; i < prop.length; i++) {
-  //     if(prop[i].type === val[index].alcoType) {
-  //       prop[i].values.push(val[index]);
-  //     }
-  //   }
-  // }
-
-// }
-// реализация варианта, когда просчитывается данные в виде {type: item, values: []}
-  // const runOverArrayAndHandleWithCallback = first =>  prop => {
-  //   first.forEach((item, index) => {
-  //     return  putIventaBalances(first, prop, index)
-  //   })
-  //   return prop
-  // }
-
-  const compose = (...fns) => (arg) => fns.reduce((composed, f) => f(composed), arg)
+  ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  // Внутренности компонента Inventa и ItenList. применена композиция. Работает норм. ДО того как начнешь получать инфу о инвентах 
+  // с апи, лучше сюда не соваться. Потом надо будет подправить для работы с данными с сервера
+  const compose = (...fns) => arg => fns.reduce((composed, f) => f(composed), arg)
 
   const getAlcoTypes = prop => prop.inventaData.map(e => e.alcoType);
 
   const filterOriginalAlcotypes = prop => prop.filter((item, pos) => prop.indexOf(item) === pos);  
-
-  const countAlcoTypesInInventaHandler = prop => compose( getAlcoTypes, filterOriginalAlcotypes)(prop);
 
   const createInstanceListOfAlcotype = prop => {
     const obj = {}
@@ -150,28 +101,22 @@ function App () {
 
   const runOverArrayGetBalances = inventa => prop => {
     inventa.forEach((item) => {
-      console.log(1)
       prop[item.alcoType].push(item)
     })
     return prop
   }
-
-  const check = prop => {
-    console.log(prop);
-    return prop;
-  }
-
+  const convertPrevINventaDataToObject = prop => Object.entries(prop)
+  
   function prepareInventaDataForDisplayingHandler(prop) {
     return compose (
-      countAlcoTypesInInventaHandler,
+      getAlcoTypes,
+      filterOriginalAlcotypes,
       createInstanceListOfAlcotype,
       runOverArrayGetBalances(inventa.inventaData),
-
-      // runOverArrayAndHandleWithCallback(prop.inventaData)
+      convertPrevINventaDataToObject,
       )(prop);
   }
-
-  // prepareInventaDataForDisplayingHandler(inventa)
+  ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
   return (
     <div className='page'>
@@ -180,8 +125,8 @@ function App () {
                isLogged = {isLogged}
                location = {location}
                />
-               {location.pathname === '/' && isLogged && <h2 className='page__message'>Отсканируйте штрих-код</h2>}
-               { location.pathname === '/' && !isLogged && <p className='page__entrance-message'>Обучаемая программа для барной инвентаризации. Войдите или зарегистрируйтесь.</p>}
+               {/* {location.pathname === '/' && isLogged && <h2 className='page__message'>Отсканируйте штрих-код</h2>}
+               {location.pathname === '/' && !isLogged && <p className='page__entrance-message'>Обучаемая программа для барной инвентаризации. Войдите или зарегистрируйтесь.</p>} */}
       <Switch>
         {!isLogged && <Route path = '/signin'>
           <Login data = {loginData}
@@ -224,7 +169,7 @@ function App () {
         <ProtectedRoute path = '/inventa'
                         component = {ItemList}
                         innerComponent = {Inventa}
-                        data = {inventa}
+                        data = {prepareInventaDataForDisplayingHandler(inventa)}
                         setData = {prepareInventaDataForDisplayingHandler}
                         title = {inventa.nameInCharge + ' // ' +  inventa.barName + ' // ' + inventa.date}        
                         isLogged = {isLogged}
@@ -263,6 +208,10 @@ function App () {
                         sortByField = {sortByField}
                         isLogged = {isLogged}
                         />
+
+        <Route component = {WrongPath} 
+               path="*"
+               history = {history}/>                        
         {/* <ProtectedRoute path = '/bottles-data'
                         component = {ItemList}
                         innerComponent = {BottlesData}

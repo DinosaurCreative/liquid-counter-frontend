@@ -1,6 +1,5 @@
 function Inventa(...props) {
   const checkboxId = Math.random(Math.random());
-
   return (
     <li className='inventa'>
       <div className='inventa__container'>

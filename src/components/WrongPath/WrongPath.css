@@ -1,0 +1,4 @@
+@import url(./wrong-path/wrong-path.css);
+@import url(./wrong-path/__title/wrong-path__title.css);
+@import url(./wrong-path/__button/wrong-path__button.css);
+@import url(./wrong-path/__text/wrong-path__text.css);

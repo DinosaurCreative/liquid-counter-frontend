@@ -1,0 +1,19 @@
+.wrong-path__button {
+  outline: none;
+  border: none;
+  background-color: #2841e2;
+  height: 35px;
+  border-radius: 10px;
+  transition: all .2s linear;
+  cursor: pointer;
+  color: #fff;
+}
+
+.wrong-path__button:hover {
+  background-color: #0320db;
+  transform: scale(1.1);
+}
+
+.wrong-path__button:active {
+  background-color: #0319a8;
+}

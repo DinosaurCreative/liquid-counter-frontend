@@ -1,4 +1,10 @@
 .bottlesData__btn-container {
   display: flex;
   flex-direction: row;
+  width: 100%;
+  justify-content: end;
+}
+
+.bottlesData__btn-container > .bottlesData__item-data {
+  margin-right: auto;
 }
