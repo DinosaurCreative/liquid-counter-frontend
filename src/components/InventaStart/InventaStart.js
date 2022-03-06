@@ -1,58 +1,55 @@
-import { Form, Element, SubmitButton } from '../../utils/Forms';
-import { createInventaHeader } from '../../utils/constants';
+import {Form, Field, SubmitButton } from '../../utils/Forms';
+import {createInventaHeader } from '../../utils/constants';
 
 
-function InventaStart({ setData, data }) {
+function InventaStart({setData, data }) {
   function submitHandler(props) {
-    setData({ nameInCharge: '', barName: 'SomeBar', date: '' });
+    setData({nameInCharge: '', barName: 'SomeBar', date: '' });
   }
 
   return (
-    <div className = 'InventaStart'>
-      <div className = 'form__container'>
-        <h1 className = 'form__title'>{createInventaHeader}</h1>
+    <div className='InventaStart'>
+      <div className='form__container'>
+        <h1 className='form__title'>{createInventaHeader}</h1>
 
-        <Form className = 'form' 
-              type = 'submit'
-              onSubmit = { submitHandler }
-              values = { data }
-              setFormValues = { setData }
+        <Form className='form' 
+              type='submit'
+              onSubmit={submitHandler }
+              values={data }
+              setFormValues={setData }
               >
 
-          <Element className = 'form__input' 
-                   type = 'text' 
-                   name = 'nameInCharge' 
-                   placeholder = 'Имя ответственного'
+          <Field className='form__input' 
+                   type='text' 
+                   name='nameInCharge' 
+                   placeholder='Имя ответственного'
                    >
-            { ({ onChange, ...props }) => <input { ...props } onChange = { e => onChange(e.target.value) }/>}
-          </Element>
+            {({onChange, ...props }) => <input {...props } onChange={e => onChange(e.target.value) }/>}
+          </Field>
 
-          <Element className = 'form__error-span'
-                   id = {'nameInCharge'}
+          <Field className='form__error-span'
+                   name={'nameInCharge'}
                    >
-            { (props) => <span { ...props }>{ data.nameInCharge }</span> }
-          </Element>
+            {(props) => <span {...props }>{data.nameInCharge }</span> }
+          </Field>
 
-          <Element className = 'form__input' 
-                   type = 'text' 
-                   name = 'date' 
-                   placeholder = 'Дата'
+          <Field className='form__input' 
+                   type='text' 
+                   name='date' 
+                   placeholder='Дата'
                   >
-            { ({ onChange, ...props }) => <input { ...props } onChange = { e => onChange(e.target.value) }/>}
-          </Element>
+            {({onChange, ...props }) => <input {...props } onChange={e => onChange(e.target.value) }/>}
+          </Field>
           
-          <Element className = 'form__error-span'
-                   id = {'date'}
+          <Field className='form__error-span'
+                   name={'date'}
                    >
-            { (props) => <span { ...props }>{ data.date }</span> }
-          </Element>
+            {(props) => <span {...props }>{data.date }</span> }
+          </Field>
 
-          <SubmitButton className = 'form__submit-button form__submit-button_place_login'
-                        type = 'submit'
-                        > 
-            { ({ isInvalid, ...props }) => <button disabled = { isInvalid } { ...props }>{ 'Начать' }</ button>}
-          </SubmitButton>
-
+          <SubmitButton className='form__submit-button form__submit-button_place_login'
+                        text='Начать'
+                        />
         </Form>
       </div>
     </div>

@@ -87,7 +87,7 @@ function App () {
   ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
   // Внутренности компонента Inventa и ItenList. применена композиция. Работает норм. ДО того как начнешь получать инфу о инвентах 
   // с апи, лучше сюда не соваться. Потом надо будет подправить для работы с данными с сервера
-  const compose = (...fns) => arg => fns.reduce((composed, f) => f(composed), arg)
+  const compose = (...fns) => arg => fns.reduce((composed, f) => f(composed), arg);
 
   const getAlcoTypes = prop => prop.inventaData.map(e => e.alcoType);
 
@@ -226,5 +226,4 @@ function App () {
   );
 };
 
-export default App;
-
+export default App; 

@@ -1,68 +1,110 @@
-import { useState, useEffect, useCallback, createContext, useContext } from 'react';
+import { createContext, useCallback, useContext, useEffect, useState } from "react";
+import { errors } from "./constants";
 
 const FormContext = createContext({});
 
-function Form({ validators, className, children, onSubmit, formValues, setFormValues }) {
-  const [ isInvalid, setIsInvailid ] = useState(true);
-
-  function submitHandler(e) {
-    e.preventDefault();
-    onSubmit(formValues);
-  }
-
+export const Form = ({ children, className, onSubmit, validators }) => {
+  const [ formValues, setFormValues ] = useState({});
+  const [ isFormInvalid, setIsFormInvailid ] = useState(true);
+  const [ formErrors, setFormErrors ] = useState({});
+  
   const onChangeInput = useCallback((name, value) => {
-    if(!name) return;
-    setFormValues(prevValue => ({
-      ...prevValue,
+    setFormValues(prevVal => ({
+      ...prevVal,
       [name]: value,
     }));
   }, []);
 
-  const formContextValues = {
-    onChangeInput,
-    isInvalid
+  function onSubmithandler(e) {
+    e.preventDefault();
+    onSubmit(formValues);
   };
-
-  return (
-    <form onSubmit = {submitHandler}
-          className = {className}>
-      <FormContext.Provider value={formContextValues}>
-        {children}  
-      </FormContext.Provider>            
-    </form>
-  )
-}
-
-function Element({ children, name, type, placeholder, className, id }) {  
-  const [ value, setValue ] = useState(''); 
-  const { onChangeInput } = useContext(FormContext);
-
+  
   useEffect(() => {
-    onChangeInput(name, value);
-  }, [onChangeInput, value, name]);
+    const formKeys = Object.keys(formValues);
+    const allErrors = formKeys.map((key) => {
+      if(!validators[key]) return;
+      const valueByKey = formValues[key];
+      const errors = Object.entries(validators[key]).map(([errorKey, validatorFn]) => {
+        return { [errorKey]: validatorFn(valueByKey) }
+      }).reduce((acc, err) => ({ ...acc, ...err }), {})
+      return {[key]: errors}
+    }).reduce((acc, item) => ({ ...acc, ...item }), {})
+    setFormErrors(allErrors);
+    
+  }, [formValues, setFormErrors, validators]);
+  
+  useEffect(() => {
+    for (let fieldKey in formErrors) {
+      const keyErrors = formErrors[fieldKey];
+      for (let errorKey in  keyErrors) {
+        if (keyErrors[errorKey] === true) {
+          return setIsFormInvailid(true);
+        };
+        setIsFormInvailid(false);
+      };
+    };
+  }, [formErrors, setIsFormInvailid]);
+
+  const formContextValue = { 
+    onChangeInput,
+    isFormInvalid,
+    formErrors,
+    formValues,
+  };
+  
+  return (
+    <form className={className}
+          onSubmit={onSubmithandler}>
+      <FormContext.Provider value={formContextValue} >
+        {children}
+      </FormContext.Provider>
+    </form>
+  );
+};
+
+export const Field = ({children, ...props }) => {
+  const { onChangeInput, formErrors, formValues } = useContext(FormContext);
+  const [ value, setValue ] = useState('');
+
+  function onChangeHandler(e) {
+    setValue(e.target.value);
+  };
+  
+  useEffect(() => {
+    onChangeInput(props.name, value);
+  }, [props.name, value, onChangeInput]);
 
   return (
-    children({
-      name,
-      type,
-      placeholder,
-      className,
-      value,
-      onChange: setValue,
-      id,
+    children({ 
+      ...props,
+      onChange: onChangeHandler,
+      errors: formErrors[props.name],
+      values: formValues[props.name],
     })
-  )
-}
+  );
+};
 
-function SubmitButton({ children, className, type }) {
-  const { isInvalid } = useContext(FormContext);
+export const SubmitButton = ({ text, ...props }) => {
+  const { isFormInvalid } = useContext(FormContext);
   return (
-    children({
-      type,
-      className,
-      isInvalid,
-    })
-  )
-}
+    <button {...props} type='submit' disabled={isFormInvalid} >{text}</button>
+  );
+};
 
-export { Form, Element, SubmitButton };
+export const errorMessageHandler = (props) => {
+  for (const name in props.errors) {
+    if(props.errors[name]) {
+      return props.errorslist[name];
+    };
+  };
+};
+
+export const errorStatusHandler = (props) => {
+  for(const name in props.errors) {
+    if(props.errors[name]) {
+      return true;
+    };
+  };
+  return false;
+};

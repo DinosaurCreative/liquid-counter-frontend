@@ -1,0 +1,11 @@
+.form__checkbox-button {
+  font-size: 13px;
+  color: #c9c7bf;
+  outline: none;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  margin-bottom: 10px;
+  max-height: 15px;
+  height: 100%;
+}

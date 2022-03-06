@@ -1,6 +1,11 @@
-export const twoWordsRegexp = /[0-9a-zA-Z]{3,}\W[0-9a-zA-Z]{3,}/;
-export const dateRegexp = /^\s*(3[01]|[12][0-9]|0?[1-9])\.(1[012]|0?[1-9])\.((?:19|20)\d{2})\s*$/g;
-export const passRegexp = /^\S+$/;
+export const regexps = {
+  twoWordsRegexp: /[0-9a-zA-Z]{3,}\W[0-9a-zA-Z]{3,}/,
+  dateRegexp: /^\s*(3[01]|[12][0-9]|0?[1-9])\.(1[012]|0?[1-9])\.((?:19|20)\d{2})\s*$/g,
+  passRegexp: /^\S+$/,
+  titleFormat: /^$|^[?!,-.а-яА-ЯёЁ0-9a-zA-Z\s]+$/,
+  numberRegexp: /^[0-9]+$/,
+  weigthAndVolumeFormatError: /^[0-9]*[.,][0-9]+$/
+}
 
 export const prevInventaTitle = 'Предыдущие инвентаризации';
 export const bottlesDBTitle = 'База данных позиций';
@@ -9,6 +14,56 @@ export const createInventaHeader = 'Внесите данные';
 export const emptyRegistration = { email: '', password: '', secreteKey: '',  name: '' };
 export const emptyLogin = { email: '', password: '' };
 export const emptyManualBottle = { title: '', volume: '', rest: '' };
+
+export const errors = {
+  required: 'Поле обязательено к заполнению',
+  maxLength: 'Превышено максимальное количество символов',
+  nameFormatErr: 'Введены недопустимые символы',
+  passMinLength: 'Пароль не должен быть короче восьми и длиннее тридцати двух символов',
+  minLength: 'Поле не может быть короче двух символов',
+  linkError: 'Указана некорректная ссылка',
+  titleError: 'Введены недопустимые символы. Поле не обязательно к заполнению',
+  urlFormatError: 'Неправильная ссылка',
+  barcodeLength: 'Код должен состоять из 13 цифр',
+  barcodeFormat: 'Код должен состоять только из цифр',
+  alcoTypeError: 'Такой тип алкоголя отсутствует в списке допустимых',
+  volumeFormatError: 'Неправильный формат данных. Укажите число с точкой. Пример: 1.0 или 0.356',
+  capWeigthFormatError: 'Неправильный формат данных. Укажите число с точкой. Пример: 1.0 или 0.356',
+  fullWeigthFormatError: 'Неправильный формат данных. Укажите число с точкой. Пример: 1.0 или 0.356',
+  emptyWeigthFormatError: 'Неправильный формат данных. Укажите число с точкой. Пример: 1.0 или 0.356',
+};
+
+export const allowedItemsTypes = [
+  'виски',
+  'водка',
+  'ром',
+  'текила',
+  'ликёр',
+  'белое вино',
+  'розовое вино',
+  'красное вино',
+  'игристое вино',
+  'граппа',
+  'арманьяк',
+  'кальвадос',
+  'портвейн',
+  'биттер',
+  'сок',
+  'молоко',
+  'сливки',
+  'лимонад',
+  'пиво',
+  'сидр',
+  'коньяк',
+  'бренди',
+  'джин',
+  'соус',
+  'чай',
+  'кофе',
+  'вермут',
+  'кашаса',
+];
+
 export const emptyBottle = {
   title: '',
   volume: '',

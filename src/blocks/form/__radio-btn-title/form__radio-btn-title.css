@@ -1,0 +1,8 @@
+.form__radio-btn-title {
+  font-size: 13px;
+  font-weight: 100;
+  cursor: pointer;
+  color: rgb(213, 145, 0);
+  transition: all .15s linear;
+  
+}

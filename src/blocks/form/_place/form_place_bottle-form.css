@@ -1,7 +1,7 @@
 .form_place_bottle-form {
   display: grid;
   grid-template-columns: repeat(2, 344px) ;
-  grid-template-rows: repeat(5, 60px) ;
+  grid-template-rows: repeat(8, 60px);
   column-gap: 70px;
   justify-content: center;
   margin-top: 60px;

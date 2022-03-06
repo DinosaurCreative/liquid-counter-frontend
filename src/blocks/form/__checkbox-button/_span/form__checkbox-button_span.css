@@ -1,0 +1,13 @@
+.form__checkbox-button_span {
+  margin-left: 15px;
+  line-height: 15px;
+  color:  #15b8eb;;
+  font-size: 30px;
+  position: absolute;
+  transition: all .2s ease;
+  cursor: pointer;
+}
+
+.form__checkbox-button_span:hover {
+  font-size: 50px;
+}

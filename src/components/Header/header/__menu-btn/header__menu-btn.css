@@ -1,7 +1,7 @@
 .header__menu-btn {
   height: 30px;
   width: 30px;
-  margin: 22px 0 21px auto;
+  margin: auto 0 auto;
   background-image: url('../../../../images/menu_button.svg');
   border: none;
   background-color: transparent;

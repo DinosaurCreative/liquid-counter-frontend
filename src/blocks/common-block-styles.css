@@ -25,5 +25,17 @@
 
 
 @import url(./component-title/component-title.css);
+@import url(./form/__input/_type/form__input_type_error.css);
+
+@import url(./form/__error-span/_type/form__error-span_type_visible.css);
+@import url(./form/__radio-btn-list/form__radio-btn-list.css);
+@import url(./form/__radio-btn-container/form__radio-btn-container.css);
+@import url(./form/__radio-btn/form__radio-btn.css);
+@import url(./form/__radio-btn-title/form__radio-btn-title.css);
+@import url(./form/__checkbox-container/form__checkbox-container.css);
+@import url(./form/__checkbox-button/form__checkbox-button.css);
+@import url(./form/__radio-btn-list/_type/form__radio-btn-list_type_open.css);
+@import url(./form/__checkbox-button/_span/form__checkbox-button_span.css);
+
 
 /* @import url(.); */

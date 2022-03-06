@@ -1,6 +1,9 @@
 function AddItem(props) {
   function setDataHandler(e) {
-    props.setData({ ...props.data, [e.target.name]: e.target.value})
+    props.setData(prevValue => ({
+      ...prevValue,
+      [e.target.name]: e.target.value
+    }))
   }
 
   function onSubmitHandler(e) {
