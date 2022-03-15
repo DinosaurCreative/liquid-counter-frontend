@@ -1,11 +1,10 @@
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import { Form, Field, SubmitButton, errorStatusHandler, errorMessageHandler } from '../../utils/Forms';
 import { validators } from '../../utils/validators';
 import { errors, allowedItemsTypes } from '../../utils/constants';
 
-
 function BottleForm({ props, setDataHandler, onSubmitHandler }) {
-
+  // console.log(12345678910);
   const [ bottleTitle, setTitle ] = useState(false);
   const [ volume, setVolume ] = useState(false);
   const [ bottleCapWeight, setBottleCapWeight ] = useState(false);
@@ -17,9 +16,9 @@ function BottleForm({ props, setDataHandler, onSubmitHandler }) {
   const [ barcode, setBarcode ] = useState(false);
   const [ alcoType, setAlcoType ] = useState(false);
   const [ value, setValue ] = useState({});  //   стейт нужно будет перенести в Арр, он буде нужен при отправке данных на сервер
-  const [ isTylistOpen, setIsTypelistOpen ] = useState(false);
+  const [ isTypelistOpen, setIsTypelistOpen ] = useState(false);
   const [ alcoTypeTitle, setAlcoTypeTitle ] = useState('');
-  
+
   const inputErrorhandler = {
     'bottleTitle': e => setTitle(e),
     'volume': e => setVolume(e),
@@ -43,8 +42,27 @@ function BottleForm({ props, setDataHandler, onSubmitHandler }) {
     setAlcoTypeTitle(e.currentTarget.innerHTML);
   }
   const errorHandler = e => inputErrorhandler.defineAction(e);
-  const openTypelistHandler = () => setIsTypelistOpen(!isTylistOpen);
   
+  function closeTypelistHandler() {
+    document.removeEventListener('keydown', closeTypelistHandler);
+    document.removeEventListener('click', closeTypelistHandler);
+    setIsTypelistOpen(false);
+  };
+
+  function openTypelistHandler() {
+    document.addEventListener('keydown', closeTypelistHandler);
+    document.addEventListener('click', closeTypelistHandler)
+    setIsTypelistOpen(true);
+  };
+
+  function alcotypeListVisibilityHandler() {
+    if(isTypelistOpen) {
+      closeTypelistHandler();
+      return 
+    }
+    openTypelistHandler();
+  }
+
   return (
     <Form className='form form_place_bottle-form' 
           type='submit' 
@@ -205,15 +223,18 @@ function BottleForm({ props, setDataHandler, onSubmitHandler }) {
         {(props) => <span {...props} className={`form__error-span form__error-span_place_bottle-form ${barcode && 'form__error-span_type_visible'}`} >{errorMessageHandler(props)}</span>}
       </Field>
       
-      <Field>
-       {() => <ul className={`form__radio-btn-list ${isTylistOpen && 'form__radio-btn-list_type_open'}`}>
+      <Field name='alcotype'
+             errorslist={{
+               required: errors.required,
+             }}>
+       {() => <ul className={`form__radio-btn-list ${isTypelistOpen && 'form__radio-btn-list_type_open'}`}>
                 <li className='form__checkbox-container'>
-                  <button className='form__checkbox-button' type='button' onClick={openTypelistHandler}>Укажите тип алкоголя. Раскрыть список <span className='form__checkbox-button_span'> &#10149;</span></button>
+                  <button className='form__checkbox-button' type='button' onClick={alcotypeListVisibilityHandler}>Укажите тип алкоголя. Раскрыть список <span className={`form__checkbox-button_span ${ !alcoTypeTitle && 'form__checkbox-button_span_not-checked'}`}> &#10149;</span></button>
                 </li>
                 {allowedItemsTypes.map((item, index) => {
                   return (
                     <li className='form__radio-btn-container' key={index}>
-                      <input className='form__radio-btn' id={index} type='radio' name='alcoType' />
+                      <input className='form__radio-btn' id={index} type='radio' name='alcoType' value={item}/>
                       <label className='form__radio-btn-title' htmlFor={index} onClick={alcoTypeHandler}>{item.replace(item[0], item[0].toUpperCase())}</label>
                     </li>
                   )

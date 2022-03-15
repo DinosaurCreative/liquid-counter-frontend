@@ -119,7 +119,8 @@ function App () {
   ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
   return (
-    <div className='page'>
+    <div className='page'
+         id='page'>
       <Header  isMenuOpened = {isMenuOpened}
                setIsMenuOpened = {setIsMenuOpened}
                isLogged = {isLogged}

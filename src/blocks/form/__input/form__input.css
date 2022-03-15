@@ -24,3 +24,6 @@
   opacity: 0;
 }
 
+.form__input:focus {
+  border-bottom: 1px #08a30080 solid;
+}

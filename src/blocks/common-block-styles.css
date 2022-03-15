@@ -36,6 +36,7 @@
 @import url(./form/__checkbox-button/form__checkbox-button.css);
 @import url(./form/__radio-btn-list/_type/form__radio-btn-list_type_open.css);
 @import url(./form/__checkbox-button/_span/form__checkbox-button_span.css);
+@import url(./form/__checkbox-button/_span/form__checkbox-button_span_not-checked.css);
 
 
 /* @import url(.); */
